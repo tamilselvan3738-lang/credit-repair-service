@@ -1,0 +1,2573 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLIENT DASHBOARD | Credit Repair Service FinTech Portal</title>
+  
+  <!-- Favicon SVG with Credit Repair Service Emblem -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230b1b2d'/%3E%3Cstop offset='100%25' stop-color='%2305281e'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2306B6D4'/%3E%3Cstop offset='50%25' stop-color='%2310B981'/%3E%3Cstop offset='100%25' stop-color='%2338BDF8'/%3E%3C/linearGradient%3E%3ClinearGradient id='w' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%2306B6D4'/%3E%3Cstop offset='100%25' stop-color='%2334D399'/%3E%3C/linearGradient%3E%3ClinearGradient id='a' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%2310B981'/%3E%3Cstop offset='100%25' stop-color='%2367E8F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='9' fill='%23080d1a'/%3E%3Crect x='4' y='8' width='32' height='20' rx='3.5' fill='url(%23bg)' stroke='url(%23b)' stroke-width='1.8'/%3E%3Crect x='4' y='12' width='32' height='2.8' fill='%2306B6D4' fill-opacity='0.25'/%3E%3Crect x='7' y='17' width='4.5' height='3.8' rx='0.8' fill='%23F59E0B'/%3E%3Crect x='13.5' y='17' width='5.5' height='1.5' rx='0.75' fill='%2367E8F9'/%3E%3Crect x='20.5' y='17' width='5.5' height='1.5' rx='0.75' fill='%2367E8F9'/%3E%3Cpath d='M11 34 L19 26' stroke='url(%23w)' stroke-width='2.6' stroke-linecap='round'/%3E%3Cpath d='M18 27 L22 23 C22.8 22.2 22.8 21 22 20.2 L21.6 19.8 C20.8 19 19.6 19 18.8 19.8 L16.8 21.8' stroke='url(%23w)' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M15 26 L23 18 L26 21 L33 10.5' stroke='url(%23a)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M28 10.5 H33 V15.5' stroke='url(%23a)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='33' cy='10.5' r='1.5' fill='%23FFFFFF'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN with full configuration matching index.html -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              300: '#6ee7b7',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              accent: '#06b6d4',
+              gold: '#f59e0b',
+              dark: '#030712',
+              card: '#080e1e',
+              border: '#172554'
+            }
+          },
+          boxShadow: {
+            '3d-btn': '0 8px 0 #047857, 0 15px 25px rgba(16, 185, 129, 0.45)',
+            '3d-amber': '0 8px 0 #b45309, 0 15px 25px rgba(245, 158, 11, 0.45)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- React 18, ReactDOM 18, Framer Motion, Babel Standalone -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .dark .custom-scrollbar::-webkit-scrollbar-track {
+      background: #050b18;
+    }
+    html:not(.dark) .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #10b981;
+    }
+    .sparkline-glow {
+      filter: drop-shadow(0 0 6px currentColor);
+    }
+  </style>
+</head>
+<body class="bg-[#050914] text-slate-100 min-h-screen selection:bg-emerald-500 selection:text-white antialiased">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef, useMemo } = React;
+    const { motion, AnimatePresence } = window.Motion;
+
+    // --- EXACT UNIFIED BRAND LOGO FROM INDEX.HTML ---
+    const BrandLogo = ({ isDark = true }) => {
+      return (
+        <a href="index.html" dir="ltr" className="group flex items-center gap-2.5 focus:outline-none select-none flex-shrink-0">
+          <div className="relative w-9 h-9 rounded-full bg-[#080d1a] border border-cyan-400/50 flex items-center justify-center shadow-[0_2px_10px_rgba(6,182,212,0.35)] flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+            <svg viewBox="0 0 36 36" className="w-5 h-5 drop-shadow-[0_2px_6px_rgba(16,185,129,0.7)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="crsCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#0b1b2d" />
+                  <stop offset="100%" stopColor="#05281e" />
+                </linearGradient>
+                <linearGradient id="crsCardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#06B6D4" />
+                  <stop offset="50%" stopColor="#10B981" />
+                  <stop offset="100%" stopColor="#38BDF8" />
+                </linearGradient>
+                <linearGradient id="crsWrenchGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#06B6D4" />
+                  <stop offset="100%" stopColor="#34D399" />
+                </linearGradient>
+                <linearGradient id="crsTrajectoryGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#10B981" />
+                  <stop offset="100%" stopColor="#67E8F9" />
+                </linearGradient>
+                <linearGradient id="crsGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FDE047" />
+                  <stop offset="100%" stopColor="#D97706" />
+                </linearGradient>
+              </defs>
+              <rect x="4" y="8" width="28" height="18" rx="3" fill="url(#crsCardBg)" stroke="url(#crsCardBorder)" strokeWidth="1.6" />
+              <rect x="4" y="11.5" width="28" height="2.6" fill="#06B6D4" fillOpacity="0.25" />
+              <rect x="7" y="16" width="4.2" height="3.5" rx="0.7" fill="url(#crsGoldGrad)" />
+              <line x1="9.1" y1="16" x2="9.1" y2="19.5" stroke="#78350F" strokeWidth="0.5" />
+              <line x1="7" y1="17.75" x2="11.2" y2="17.75" stroke="#78350F" strokeWidth="0.5" />
+              <rect x="13" y="16.2" width="4.5" height="1.3" rx="0.65" fill="#67E8F9" fillOpacity="0.8" />
+              <rect x="19" y="16.2" width="4.5" height="1.3" rx="0.65" fill="#67E8F9" fillOpacity="0.8" />
+              <rect x="13" y="19" width="6.5" height="1.2" rx="0.6" fill="#34D399" fillOpacity="0.75" />
+              <path d="M10 32 L17.5 24.5" stroke="url(#crsWrenchGrad)" strokeWidth="2.5" strokeLinecap="round" />
+              <path d="M16.5 25.5 L20.5 21.5 C21.3 20.7 21.3 19.5 20.5 18.7 L20.1 18.3 C19.3 17.5 18.1 17.5 17.3 18.3 L15.5 20.1 M17 19 L18.5 20.5" 
+                    stroke="url(#crsWrenchGrad)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              <path d="M14 24.5 L21.5 17 L24.5 20 L31 9.5" stroke="url(#crsTrajectoryGrad)" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M26.5 9.5 H31 V14" stroke="url(#crsTrajectoryGrad)" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round" />
+              <circle cx="31" cy="9.5" r="1.5" fill="#FFFFFF" className="animate-ping" style={{ transformOrigin: '31px 9.5px', animationDuration: '3s' }} />
+              <circle cx="31" cy="9.5" r="1.2" fill="#FFFFFF" />
+              <path d="M31 6.5 V12.5 M28 9.5 H34" stroke="#67E8F9" strokeWidth="1" strokeLinecap="round" />
+            </svg>
+          </div>
+          <div className="flex flex-col text-left leading-none flex-shrink-0">
+            <div className="flex items-center gap-1.5 leading-none">
+              <span className={`font-display font-black text-sm tracking-tight leading-none ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                CREDIT<span className="text-[#00c076]">REPAIR</span>
+              </span>
+              <span className="text-[10px] font-mono font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 leading-none">
+                850+
+              </span>
+            </div>
+            <div className="flex items-center gap-1.5 mt-1 leading-none">
+              <span className={`text-[9px] font-mono tracking-[0.18em] font-bold uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                SERVICE
+              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span className="text-[9px] font-mono font-bold tracking-wider text-cyan-400">
+                FCRA
+              </span>
+            </div>
+          </div>
+        </a>
+      );
+    };
+
+    // --- REUSABLE GAUGES & CHARTS ---
+    const ScoreGauge = ({ score = 684, min = 300, max = 850 }) => {
+      const percentage = (score - min) / (max - min);
+      const strokeDashoffset = 283 - (283 * percentage);
+      const color = score >= 740 ? "#10b981" : score >= 670 ? "#06b6d4" : score >= 580 ? "#f59e0b" : "#ef4444";
+
+      return (
+        <div className="relative w-36 h-36 flex items-center justify-center">
+          <svg className="w-full h-full -rotate-90 transform" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="42" stroke="currentColor" strokeWidth="8" className="text-slate-800" fill="transparent" />
+            <circle
+              cx="50"
+              cy="50"
+              r="42"
+              stroke={color}
+              strokeWidth="8"
+              strokeDasharray="264"
+              strokeDashoffset={264 - (264 * percentage)}
+              strokeLinecap="round"
+              fill="transparent"
+              className="transition-all duration-1000 ease-out"
+            />
+          </svg>
+          <div className="absolute flex flex-col items-center justify-center text-center">
+            <span className="font-mono text-[10px] uppercase font-bold text-slate-400">FICO® Score</span>
+            <span className="text-3xl font-display font-black text-white">{score}</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 mt-0.5">
+              Good (Prime Track)
+            </span>
+          </div>
+        </div>
+      );
+    };
+
+    const ScoreProgressCurve = () => (
+      <svg className="w-full h-24 overflow-visible" viewBox="0 0 400 90" fill="none">
+        <defs>
+          <linearGradient id="curveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M 10 75 Q 70 65, 120 52 T 240 38 T 320 22 L 390 10"
+          stroke="#10b981"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          fill="none"
+          className="sparkline-glow"
+        />
+        <path
+          d="M 10 75 Q 70 65, 120 52 T 240 38 T 320 22 L 390 10 L 390 90 L 10 90 Z"
+          fill="url(#curveGradient)"
+        />
+        <circle cx="10" cy="75" r="4.5" fill="#f59e0b" />
+        <circle cx="120" cy="52" r="4.5" fill="#06b6d4" />
+        <circle cx="240" cy="38" r="4.5" fill="#3b82f6" />
+        <circle cx="390" cy="10" r="5" fill="#10b981" className="animate-ping" />
+        <circle cx="390" cy="10" r="4" fill="#ffffff" />
+      </svg>
+    );
+
+    // ==========================================
+    // REUSABLE PROFESSIONAL VECTOR SVG ICONS
+    // ==========================================
+    const IconSun = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+      </svg>
+    );
+
+    const IconMoon = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    );
+
+    const IconArrowLeftRight = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M8 7h12m0 0-4-4m4 4-4 4"/>
+        <path d="M16 17H4m0 0 4 4m-4-4 4-4"/>
+      </svg>
+    );
+
+    const IconOverview = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="7" height="9" x="3" y="3" rx="1"/>
+        <rect width="7" height="5" x="14" y="3" rx="1"/>
+        <rect width="7" height="9" x="14" y="12" rx="1"/>
+        <rect width="7" height="5" x="3" y="16" rx="1"/>
+      </svg>
+    );
+
+    const IconUsers = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    );
+
+    const IconUser = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+    );
+
+    const IconReports = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" x2="8" y1="13" y2="13"/>
+        <line x1="16" x2="8" y1="17" y2="17"/>
+        <line x1="10" x2="8" y1="9" y2="9"/>
+      </svg>
+    );
+
+    const IconScale = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+        <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+        <path d="M7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+      </svg>
+    );
+
+    const IconFolder = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/>
+      </svg>
+    );
+
+    const IconTrendingUp = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+        <polyline points="16 7 22 7 22 13"/>
+      </svg>
+    );
+
+    const IconBell = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+      </svg>
+    );
+
+    const IconSpecialist = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="14" x="2" y="7" rx="2"/>
+        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+      </svg>
+    );
+
+    const IconCreditCard = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="14" x="2" y="5" rx="2"/>
+        <line x1="2" x2="22" y1="10" y2="10"/>
+      </svg>
+    );
+
+    const IconRefresh = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+        <path d="M3 3v5h5"/>
+        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+        <path d="M16 21h5v-5"/>
+      </svg>
+    );
+
+    const IconCoins = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M14.8 9A2 2 0 0 0 13 8h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1-1.8-1"/>
+        <path d="M12 6v2m0 8v2"/>
+      </svg>
+    );
+
+    const IconMessageSquare = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    );
+
+    const IconStar = ({ className = "w-4 h-4", fill = "currentColor" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill={fill} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    );
+
+    const IconAnalytics = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 3v18h18"/>
+        <path d="m19 17-5-5-4 4-6-6"/>
+        <polyline points="19 12 19 17 14 17"/>
+      </svg>
+    );
+
+    const IconGlobe = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" x2="22" y1="12" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+    );
+
+    const IconShield = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    );
+
+    const IconLogout = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+        <polyline points="16 17 21 12 16 7"/>
+        <line x1="21" x2="9" y1="12" y2="12"/>
+      </svg>
+    );
+
+    const IconMail = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="16" x="2" y="4" rx="2"/>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      </svg>
+    );
+
+    const IconPlus = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+    );
+
+    const IconSearch = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    );
+
+    const IconUpload = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/>
+        <line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+    );
+
+    const IconDownload = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    );
+
+    const IconLock = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+    );
+
+    const IconSettings = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </svg>
+    );
+
+    const IconClock = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+    );
+
+    const IconZap = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+      </svg>
+    );
+
+    const IconTarget = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <circle cx="12" cy="12" r="6"/>
+        <circle cx="12" cy="12" r="2"/>
+      </svg>
+    );
+
+    const IconFileText = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" x2="8" y1="13" y2="13"/>
+        <line x1="16" x2="8" y1="17" y2="17"/>
+        <line x1="10" x2="8" y1="9" y2="9"/>
+      </svg>
+    );
+
+    const IconEdit = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 20h9"/>
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+      </svg>
+    );
+
+    const IconCheck = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    );
+
+    const IconX = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    );
+
+    const IconArrowRight = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    );
+
+    const IconArrowLeft = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"/>
+        <polyline points="12 19 5 12 12 5"/>
+      </svg>
+    );
+
+    const IconPaperclip = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+      </svg>
+    );
+
+    const IconCalendar = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+    );
+
+    const IconAlertTriangle = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+    );
+
+
+    // ==========================================
+    // 1. DASHBOARD OVERVIEW VIEW
+    // ==========================================
+    const UserOverviewView = ({ onOpenModal, showToast, isDark, setActiveTab }) => {
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+      const innerCardClass = isDark ? "bg-[#070b16] border-slate-800/60" : "bg-slate-50 border-slate-200";
+
+      return (
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          exit={{ opacity: 0, y: -15 }} 
+          transition={{ duration: 0.25 }}
+          className="space-y-6"
+        >
+          {/* Welcome Client Banner */}
+          <div className={`p-6 rounded-3xl border relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6 ${cardClass}`}>
+            <div className="space-y-2 z-10">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                ACTIVE RESTORATION CYCLE 2
+              </div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Welcome Client, David Chen!
+              </h1>
+              <p className={`text-sm max-w-xl ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                Your credit file is actively protected by FCRA statutory law. Your FICO® score has surged <strong className="text-emerald-400">+144 points</strong> since onboarding with assigned Specialist <span className="text-cyan-400 font-semibold">Sarah Jenkins, Esq.</span>
+              </p>
+            </div>
+            <div className="flex items-center gap-3 z-10">
+              <button 
+                onClick={() => onOpenModal('newDispute')}
+                className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-3 rounded-xl shadow-[0_6px_20px_rgba(16,185,129,0.35)] transition-all transform active:scale-95 text-xs uppercase tracking-wider flex items-center gap-2"
+              >
+                <IconScale className="w-3.5 h-3.5 inline mr-1.5 text-cyan-400" /> FILE NEW DISPUTE
+              </button>
+            </div>
+            {/* Subtle background glow */}
+            <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          </div>
+
+          {/* Key Metric Gauges: Current Score, Previous Score, Active Disputes & Subscription */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Current Credit Score */}
+            <div className={`p-5 rounded-2xl border flex flex-col items-center justify-between text-center ${cardClass}`}>
+              <div className="w-full flex items-center justify-between text-[11px] font-mono font-bold uppercase text-slate-400 pb-2 border-b border-slate-800">
+                <span>CURRENT CREDIT SCORE</span>
+                <span className="text-emerald-400">+144 pts</span>
+              </div>
+              <div className="my-2">
+                <ScoreGauge score={684} />
+              </div>
+              <div className="text-xs text-slate-400">
+                Tri-Bureau Average FICO® 8
+              </div>
+            </div>
+
+            {/* Previous Credit Score & Turnaround */}
+            <div className={`p-5 rounded-2xl border flex flex-col justify-between ${cardClass}`}>
+              <div>
+                <div className="text-[11px] font-mono font-bold uppercase text-slate-400">
+                  PREVIOUS CREDIT SCORE
+                </div>
+                <div className="text-3xl font-display font-extrabold text-slate-300 mt-2">
+                  540 <span className="text-xs text-rose-400 font-mono font-normal">Subprime Baseline</span>
+                </div>
+                <p className="text-xs text-slate-400 mt-2">
+                  Initial score recorded upon onboarding in May 2026 before negative item deletions.
+                </p>
+              </div>
+              <div className="mt-4 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
+                <strong>Progress Trajectory:</strong> Rebounded past Fair into Good Prime tier (+26.6% increase).
+              </div>
+            </div>
+
+            {/* Disputes Status Overview */}
+            <div className={`p-5 rounded-2xl border flex flex-col justify-between ${cardClass}`}>
+              <div>
+                <div className="text-[11px] font-mono font-bold uppercase text-slate-400">
+                  DISPUTES IN PROGRESS
+                </div>
+                <div className="grid grid-cols-3 gap-2 my-3 text-center">
+                  <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="text-xl font-display font-bold text-cyan-400">3</div>
+                    <div className="text-[10px] text-slate-400 mt-0.5">Active</div>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="text-xl font-display font-bold text-amber-400">2</div>
+                    <div className="text-[10px] text-slate-400 mt-0.5">Pending</div>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="text-xl font-display font-bold text-emerald-400">5</div>
+                    <div className="text-[10px] text-slate-400 mt-0.5">Completed</div>
+                  </div>
+                </div>
+              </div>
+              <button 
+                onClick={() => setActiveTab('disputes')}
+                className="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 text-xs font-semibold text-center border border-slate-700 transition-colors"
+              >
+                <span>Track Active Disputes</span> <IconArrowRight className="w-3.5 h-3.5 inline ml-1" />
+              </button>
+            </div>
+
+            {/* Current Plan & Attention Banner */}
+            <div className={`p-5 rounded-2xl border flex flex-col justify-between ${cardClass}`}>
+              <div>
+                <div className="text-[11px] font-mono font-bold uppercase text-slate-400">
+                  CURRENT SUBSCRIPTION PLAN
+                </div>
+                <div className="text-xl font-display font-extrabold text-white mt-1">
+                  Pro Score Booster
+                </div>
+                <div className="text-xs text-emerald-400 font-mono mt-0.5">$149.00 / month • Active</div>
+                <div className="mt-3 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[11px] text-amber-300">
+                  <span className="font-bold flex items-center gap-1.5"><IconAlertTriangle className="w-4 h-4 text-amber-400 inline" /> Documents Requiring Attention:</span> 1 utility statement needed for address re-verification.
+                </div>
+              </div>
+              <button 
+                onClick={() => onOpenModal('uploadDoc')}
+                className="w-full mt-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs text-center transition-colors"
+              >
+                Upload Required Doc
+              </button>
+            </div>
+          </div>
+
+          {/* Credit Score Progress Chart & Recent Notifications */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Credit Score Progress Chart (2 cols) */}
+            <div className={`p-6 rounded-2xl border lg:col-span-2 ${cardClass}`}>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 gap-2">
+                <div>
+                  <h3 className={`font-display font-bold text-base ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                    Credit Score Progress Chart (6 Months)
+                  </h3>
+                  <p className="text-xs text-slate-400 mt-0.5">Historical verification records from Equifax, Experian & TransUnion</p>
+                </div>
+                <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">
+                  +144 Pts Verified Increase
+                </span>
+              </div>
+              <div className="py-6">
+                <ScoreProgressCurve />
+              </div>
+              <div className="grid grid-cols-6 text-center text-xs text-slate-400 pt-2 border-t border-slate-800">
+                <div><span>May</span><div className="font-bold text-slate-200 mt-1">540</div></div>
+                <div><span>Jun</span><div className="font-bold text-slate-200 mt-1">572</div></div>
+                <div><span>Jul</span><div className="font-bold text-slate-200 mt-1">605</div></div>
+                <div><span>Aug</span><div className="font-bold text-slate-200 mt-1">638</div></div>
+                <div><span>Sep</span><div className="font-bold text-slate-200 mt-1">660</div></div>
+                <div><span>Nov (Now)</span><div className="font-bold text-emerald-400 mt-1">684</div></div>
+              </div>
+            </div>
+
+            {/* Recent Notifications (1 col) */}
+            <div className={`p-6 rounded-2xl border flex flex-col justify-between ${cardClass}`}>
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className={`font-display font-bold text-base ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                    Recent Notifications
+                  </h3>
+                  <span className="text-[10px] font-mono text-cyan-400 cursor-pointer" onClick={() => setActiveTab('notifications')}>
+                    View All
+                  </span>
+                </div>
+                <div className="space-y-3">
+                  {[
+                    { time: "Yesterday", text: "Equifax deleted late payment tradeline from Capital One", status: "DELETED", color: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10" },
+                    { time: "Nov 07", text: "Credit Specialist Sarah Jenkins updated your Dispute Action Plan", status: "UPDATED", color: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10" },
+                    { time: "Nov 05", text: "Driver's License copy verified by legal department", status: "VERIFIED", color: "text-indigo-400 border-indigo-500/30 bg-indigo-500/10" },
+                    { time: "Nov 02", text: "Monthly subscription auto-renewed ($149.00)", status: "PAID", color: "text-amber-400 border-amber-500/30 bg-amber-500/10" }
+                  ].map((n, idx) => (
+                    <div key={idx} className={`p-3 rounded-xl border text-xs ${innerCardClass}`}>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className={`px-2 py-0.5 rounded text-[9px] font-mono font-bold border ${n.color}`}>{n.status}</span>
+                        <span className="text-[10px] text-slate-500">{n.time}</span>
+                      </div>
+                      <p className="text-slate-300">{n.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-slate-800 text-center">
+                <button 
+                  onClick={() => showToast("All recent notifications marked as read")}
+                  className="text-xs text-slate-400 hover:text-white"
+                >
+                  Mark All as Read
+                </button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 2. MY PROFILE VIEW
+    // ==========================================
+    const UserProfileView = ({ showToast, isDark }) => {
+      const [profileData, setProfileData] = useState({
+        clientId: "CRS-8092-DC",
+        fullName: "David Chen",
+        dob: "March 14, 1988",
+        email: "david.chen@gmail.com",
+        phone: "+1 (555) 234-8901",
+        address: "742 Evergreen Terrace, Suite 400, Springfield, IL 62704"
+      });
+
+      const [passwords, setPasswords] = useState({ current: "", newPass: "", confirm: "" });
+
+      const handleSaveProfile = (e) => {
+        e.preventDefault();
+        showToast("Personal Information updated successfully");
+      };
+
+      const handleSavePassword = (e) => {
+        e.preventDefault();
+        if (passwords.newPass !== passwords.confirm) {
+          showToast("New passwords do not match!");
+          return;
+        }
+        showToast("Password changed successfully with 256-bit encryption");
+        setPasswords({ current: "", newPass: "", confirm: "" });
+      };
+
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div>
+            <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+              My Client Profile & Account Settings
+            </h1>
+            <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+              Personal Information, Client ID, Full Name, Date of Birth, Email, Phone, Residential Address, Profile Photo & Change Password.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Profile Photo & Client ID Card */}
+            <div className={`p-6 rounded-2xl border flex flex-col items-center text-center justify-between ${cardClass}`}>
+              <div className="w-full">
+                <div className="relative w-24 h-24 rounded-full bg-slate-800 border-2 border-emerald-400 mx-auto flex items-center justify-center text-3xl font-bold text-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+                  DC
+                </div>
+                <h3 className="font-display font-bold text-lg text-white mt-4">{profileData.fullName}</h3>
+                <span className="font-mono text-xs text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20 mt-1 inline-block">
+                  Client ID: {profileData.clientId}
+                </span>
+                <p className="text-xs text-slate-400 mt-3">FCRA Protected Client since May 2026</p>
+              </div>
+
+              <div className="w-full mt-6 pt-4 border-t border-slate-800 space-y-2">
+                <button 
+                  onClick={() => showToast("Profile photo upload dialog opened")}
+                  className="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700"
+                >
+                  Change Profile Photo
+                </button>
+              </div>
+            </div>
+
+            {/* Personal Information Form */}
+            <div className={`p-6 rounded-2xl border lg:col-span-2 ${cardClass}`}>
+              <h3 className={`font-display font-bold text-base mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Personal Information
+              </h3>
+              <form onSubmit={handleSaveProfile} className="space-y-4 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-slate-400 font-semibold mb-1">Full Legal Name</label>
+                    <input 
+                      type="text" 
+                      value={profileData.fullName}
+                      onChange={e => setProfileData({...profileData, fullName: e.target.value})}
+                      className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-slate-400 font-semibold mb-1">Date of Birth</label>
+                    <input 
+                      type="text" 
+                      value={profileData.dob}
+                      onChange={e => setProfileData({...profileData, dob: e.target.value})}
+                      className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-slate-400 font-semibold mb-1">Email Address</label>
+                    <input 
+                      type="email" 
+                      value={profileData.email}
+                      onChange={e => setProfileData({...profileData, email: e.target.value})}
+                      className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-slate-400 font-semibold mb-1">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      value={profileData.phone}
+                      onChange={e => setProfileData({...profileData, phone: e.target.value})}
+                      className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-slate-400 font-semibold mb-1">Residential Address (For Bureau Disputes)</label>
+                  <input 
+                    type="text" 
+                    value={profileData.address}
+                    onChange={e => setProfileData({...profileData, address: e.target.value})}
+                    className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                  />
+                </div>
+
+                <div className="flex justify-end pt-2">
+                  <button 
+                    type="submit" 
+                    className="px-6 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold transition-all text-xs"
+                  >
+                    Save Personal Information
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          {/* Change Password Card */}
+          <div className={`p-6 rounded-2xl border max-w-xl ${cardClass}`}>
+            <h3 className={`font-display font-bold text-base mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+              Change Password & Authentication
+            </h3>
+            <form onSubmit={handleSavePassword} className="space-y-3 text-xs">
+              <div>
+                <label className="block text-slate-400 font-semibold mb-1">Current Password</label>
+                <input 
+                  type="password" 
+                  required
+                  placeholder="••••••••••••"
+                  value={passwords.current}
+                  onChange={e => setPasswords({...passwords, current: e.target.value})}
+                  className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                />
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-slate-400 font-semibold mb-1">New Password</label>
+                  <input 
+                    type="password" 
+                    required
+                    placeholder="Min 8 characters"
+                    value={passwords.newPass}
+                    onChange={e => setPasswords({...passwords, newPass: e.target.value})}
+                    className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-400 font-semibold mb-1">Confirm New Password</label>
+                  <input 
+                    type="password" 
+                    required
+                    placeholder="Repeat password"
+                    value={passwords.confirm}
+                    onChange={e => setPasswords({...passwords, confirm: e.target.value})}
+                    className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                  />
+                </div>
+              </div>
+              <button 
+                type="submit" 
+                className="mt-2 px-5 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs"
+              >
+                Update Password
+              </button>
+            </form>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 3. MY CREDIT SCORE VIEW
+    // ==========================================
+    const UserCreditScoreView = ({ showToast, isDark }) => {
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                My Credit Score & Factor Analysis
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Current Credit Score, Previous Credit Score, Score History, Progress Graph, Monthly Score Comparison, Credit Score Factors, Payment History Overview & Credit Utilization Overview.
+              </p>
+            </div>
+            <button 
+              onClick={() => showToast("Compiling official verified Credit Progress Report PDF...")}
+              className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-xs flex items-center gap-2"
+            >
+              <IconDownload className="w-3.5 h-3.5 inline mr-1.5 text-emerald-400" /> DOWNLOAD CREDIT PROGRESS REPORT
+            </button>
+          </div>
+
+          {/* Tri-Bureau Monthly Score Comparison Matrix */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              { bureau: "Equifax", score: 684, prev: 542, gain: "+142 pts", status: "Good", updated: "Nov 09, 2026", color: "text-emerald-400 border-emerald-500/30" },
+              { bureau: "Experian", score: 678, prev: 535, gain: "+143 pts", status: "Good", updated: "Nov 08, 2026", color: "text-cyan-400 border-cyan-500/30" },
+              { bureau: "TransUnion", score: 690, prev: 544, gain: "+146 pts", status: "Good", updated: "Nov 09, 2026", color: "text-indigo-400 border-indigo-500/30" }
+            ].map((b, idx) => (
+              <div key={idx} className={`p-5 rounded-2xl border ${cardClass}`}>
+                <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+                  <h3 className="font-display font-bold text-lg text-slate-100">{b.bureau} Score</h3>
+                  <span className={`px-2 py-0.5 rounded text-xs font-mono font-bold border ${b.color}`}>
+                    {b.gain}
+                  </span>
+                </div>
+                <div className="my-4 flex items-baseline gap-3">
+                  <span className="text-3xl font-display font-black text-white">{b.score}</span>
+                  <span className="text-xs text-slate-400">from {b.prev} starting</span>
+                </div>
+                <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden mb-3">
+                  <div className="bg-gradient-to-r from-emerald-500 to-cyan-400 h-2 rounded-full" style={{ width: `${((b.score-300)/(850-300))*100}%` }}></div>
+                </div>
+                <div className="flex justify-between text-[11px] text-slate-400">
+                  <span>Rating: <strong className="text-slate-200">{b.status}</strong></span>
+                  <span>Updated: {b.updated}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Credit Score Factors Breakdown (35%, 30%, 15%, 10%, 10%) */}
+          <div className={`p-6 rounded-2xl border ${cardClass}`}>
+            <h3 className={`font-display font-bold text-base mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+              The 5 Core FICO® Credit Score Factors
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+              {/* Factor 1: Payment History Overview */}
+              <div className="p-4 rounded-xl border border-slate-800 bg-slate-900/60">
+                <div className="flex justify-between font-bold text-slate-200 mb-1">
+                  <span>Payment History Overview (35%)</span>
+                  <span className="text-emerald-400 font-mono">98.2%</span>
+                </div>
+                <p className="text-slate-400 text-[11px]">3 wrongful late payments successfully deleted via FCRA 609 disputes.</p>
+                <div className="w-full bg-slate-800 rounded-full h-1.5 mt-3">
+                  <div className="bg-emerald-400 h-1.5 rounded-full" style={{ width: '98%' }}></div>
+                </div>
+              </div>
+
+              {/* Factor 2: Credit Utilization Overview */}
+              <div className="p-4 rounded-xl border border-slate-800 bg-slate-900/60">
+                <div className="flex justify-between font-bold text-slate-200 mb-1">
+                  <span>Credit Utilization Overview (30%)</span>
+                  <span className="text-cyan-400 font-mono">14%</span>
+                </div>
+                <p className="text-slate-400 text-[11px]">$1,820 balance across $13,000 limits. Optimal is below 30%.</p>
+                <div className="w-full bg-slate-800 rounded-full h-1.5 mt-3">
+                  <div className="bg-cyan-400 h-1.5 rounded-full" style={{ width: '14%' }}></div>
+                </div>
+              </div>
+
+              {/* Factor 3: Length of Credit History */}
+              <div className="p-4 rounded-xl border border-slate-800 bg-slate-900/60">
+                <div className="flex justify-between font-bold text-slate-200 mb-1">
+                  <span>Credit History Length (15%)</span>
+                  <span className="text-indigo-400 font-mono">7.4 Yrs</span>
+                </div>
+                <p className="text-slate-400 text-[11px]">Oldest revolving tradeline opened in 2017. Solid seasoned age.</p>
+                <div className="w-full bg-slate-800 rounded-full h-1.5 mt-3">
+                  <div className="bg-indigo-400 h-1.5 rounded-full" style={{ width: '75%' }}></div>
+                </div>
+              </div>
+
+              {/* Factor 4: Credit Mix */}
+              <div className="p-4 rounded-xl border border-slate-800 bg-slate-900/60">
+                <div className="flex justify-between font-bold text-slate-200 mb-1">
+                  <span>Credit Mix Overview (10%)</span>
+                  <span className="text-amber-400 font-mono">Good</span>
+                </div>
+                <p className="text-slate-400 text-[11px]">Healthy balance of credit cards, auto loan, and revolving lines.</p>
+                <div className="w-full bg-slate-800 rounded-full h-1.5 mt-3">
+                  <div className="bg-amber-400 h-1.5 rounded-full" style={{ width: '80%' }}></div>
+                </div>
+              </div>
+
+              {/* Factor 5: New Credit & Inquiries */}
+              <div className="p-4 rounded-xl border border-slate-800 bg-slate-900/60">
+                <div className="flex justify-between font-bold text-slate-200 mb-1">
+                  <span>New Credit / Inquiries (10%)</span>
+                  <span className="text-emerald-400 font-mono">2 Inquiries</span>
+                </div>
+                <p className="text-slate-400 text-[11px]">4 unauthorized inquiries removed during Cycle 1.</p>
+                <div className="w-full bg-slate-800 rounded-full h-1.5 mt-3">
+                  <div className="bg-emerald-400 h-1.5 rounded-full" style={{ width: '90%' }}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Monthly Score Comparison History */}
+          <div className={`p-6 rounded-2xl border ${cardClass}`}>
+            <h3 className={`font-display font-bold text-base mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+              Credit Score History & Monthly Comparison
+            </h3>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead className="bg-slate-900/80 border-b border-slate-800 text-slate-400 uppercase font-mono">
+                  <tr>
+                    <th className="py-3 px-4">Cycle Month</th>
+                    <th className="py-3 px-4">Equifax</th>
+                    <th className="py-3 px-4">Experian</th>
+                    <th className="py-3 px-4">TransUnion</th>
+                    <th className="py-3 px-4">Monthly Delta</th>
+                    <th className="py-3 px-4">Milestones Achieved</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-800/60">
+                  {[
+                    { month: "November 2026", eq: 684, ex: 678, tu: 690, delta: "+24 pts", milestone: "Capital One 30-day late removed" },
+                    { month: "October 2026", eq: 660, ex: 654, tu: 666, delta: "+22 pts", milestone: "Midland collections deletion confirmed" },
+                    { month: "September 2026", eq: 638, ex: 630, tu: 645, delta: "+33 pts", milestone: "Credit card balance paid to 14%" },
+                    { month: "August 2026", eq: 605, ex: 598, tu: 612, delta: "+33 pts", milestone: "Crossed Fair credit threshold" },
+                    { month: "May 2026 (Start)", eq: 542, ex: 535, tu: 544, delta: "Baseline", milestone: "Enrolled in Credit Repair Service" }
+                  ].map((row, i) => (
+                    <tr key={i} className="hover:bg-slate-800/30">
+                      <td className="py-3 px-4 font-bold text-white">{row.month}</td>
+                      <td className="py-3 px-4 font-mono text-emerald-400">{row.eq}</td>
+                      <td className="py-3 px-4 font-mono text-cyan-400">{row.ex}</td>
+                      <td className="py-3 px-4 font-mono text-indigo-400">{row.tu}</td>
+                      <td className="py-3 px-4 font-mono font-bold text-emerald-400">{row.delta}</td>
+                      <td className="py-3 px-4 text-slate-300">{row.milestone}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 4. MY CREDIT REPORTS VIEW
+    // ==========================================
+    const UserCreditReportsView = ({ showToast, isDark }) => {
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                My Credit Reports & Bureau Audit
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Upload Credit Report, View Uploaded Reports, Credit Report Summary, Personal Info Review, Account Review, Negative Account Review & Download Reviewed Reports.
+              </p>
+            </div>
+            <button 
+              onClick={() => showToast("Downloading latest reviewed tri-merge credit report...")}
+              className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-xs flex items-center gap-2"
+            >
+              <IconDownload className="w-3.5 h-3.5 inline mr-1.5 text-indigo-400" /> DOWNLOAD REVIEWED REPORT
+            </button>
+          </div>
+
+          {/* Upload Credit Report Dropzone */}
+          <div className={`p-6 rounded-2xl border border-dashed border-cyan-500/40 bg-cyan-500/5 text-center ${cardClass}`}>
+            <IconUpload className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+            <h3 className="font-bold text-white text-base">Upload Credit Report (Tri-Merge PDF)</h3>
+            <p className="text-xs text-slate-400 max-w-md mx-auto mt-1">
+              Upload your latest credit report from IdentityIQ, SmartCredit, or AnnualCreditReport.com for immediate specialist analysis.
+            </p>
+            <button 
+              onClick={() => showToast("File picker opened for credit report upload")}
+              className="mt-4 px-5 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs"
+            >
+              Select Report File
+            </button>
+          </div>
+
+          {/* Credit Report Summary Row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { label: "TOTAL ACCOUNTS REVIEWED", value: "14 Tradelines" },
+              { label: "POSITIVE ON-TIME ACCOUNTS", value: "12 Verified" },
+              { label: "NEGATIVE ITEMS IDENTIFIED", value: "2 Active Disputes" },
+              { label: "UNAUTHORIZED INQUIRIES", value: "0 Remaining" }
+            ].map((s, idx) => (
+              <div key={idx} className={`p-4 rounded-xl border ${cardClass}`}>
+                <div className="text-[10px] font-mono text-slate-400 uppercase">{s.label}</div>
+                <div className="text-lg font-display font-bold text-white mt-1">{s.value}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Negative Account Review & Inaccuracies */}
+          <div className={`p-6 rounded-2xl border ${cardClass}`}>
+            <h3 className={`font-display font-bold text-base mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+              Negative Account Review & Identified Inaccuracies
+            </h3>
+            <div className="space-y-3">
+              {[
+                { furnisher: "Portfolio Recovery Associates", type: "Medical Collection Account ($420)", error: "Paid in full in 2024. Reporting active improperly.", code: "FCRA § 611", status: "In Bureau Review", bureau: "Experian" },
+                { furnisher: "Capital One Auto Finance", type: "Duplicate Tradeline Entry", error: "Duplicate account number listed twice.", code: "FCRA § 607(b)", status: "Dispatched", bureau: "TransUnion" }
+              ].map((item, idx) => (
+                <div key={idx} className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-bold text-white text-sm">{item.furnisher}</span>
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">{item.bureau}</span>
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20">{item.status}</span>
+                    </div>
+                    <p className="text-slate-300 mt-1 font-medium">{item.type} — <span className="text-slate-400 font-normal">{item.error}</span></p>
+                    <span className="text-emerald-400 text-[10px] font-mono mt-1 block">{item.code} Violation</span>
+                  </div>
+                  <button 
+                    onClick={() => showToast(`Inspection modal opened for ${item.furnisher}`)}
+                    className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold"
+                  >
+                    View Legal Audit
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 5. MY DISPUTES VIEW
+    // ==========================================
+    const UserDisputesView = ({ onOpenModal, showToast, isDark }) => {
+      const disputes = [
+        { id: "DSP-1049", bureau: "Equifax", account: "Capital One NA", type: "Incorrect Payment History", status: "Completed (Deleted)", date: "Oct 12, 2026", result: "Tradeline Deleted" },
+        { id: "DSP-1050", bureau: "Experian", account: "Portfolio Recovery", type: "Paid Medical Collection", status: "Active (In Bureau Review)", date: "Oct 28, 2026", result: "Day 14 of 30" },
+        { id: "DSP-1051", bureau: "TransUnion", account: "Capital One Auto", type: "Duplicate Account", status: "Pending Response", date: "Nov 02, 2026", result: "Day 9 of 30" },
+        { id: "DSP-1042", bureau: "Equifax", account: "Midland Credit", type: "Zombie Debt Beyond 7 Years", status: "Completed (Deleted)", date: "Aug 15, 2026", result: "Tradeline Deleted" }
+      ];
+
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                My Credit Disputes & Bureau Tracking
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Create New Dispute, Submit Dispute Request, Select Credit Bureau, Select Disputed Account, Dispute Description, Upload Supporting Evidence, Dispute Submission Date, Active Disputes, Pending Disputes, Completed Disputes, Rejected Disputes, Dispute Status Tracking & Dispute Response History.
+              </p>
+            </div>
+            <button 
+              onClick={() => onOpenModal('newDispute')}
+              className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-xs flex items-center gap-2"
+            >
+              <IconPlus className="w-3.5 h-3.5 inline mr-1.5 text-cyan-400" /> SUBMIT DISPUTE REQUEST
+            </button>
+          </div>
+
+          {/* Dispute Counts */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className={`p-4 rounded-xl border ${cardClass}`}>
+              <div className="text-[10px] font-mono text-slate-400 uppercase">ACTIVE DISPUTES</div>
+              <div className="text-2xl font-bold text-cyan-400 mt-1">3</div>
+            </div>
+            <div className={`p-4 rounded-xl border ${cardClass}`}>
+              <div className="text-[10px] font-mono text-slate-400 uppercase">PENDING DISPUTES</div>
+              <div className="text-2xl font-bold text-amber-400 mt-1">2</div>
+            </div>
+            <div className={`p-4 rounded-xl border ${cardClass}`}>
+              <div className="text-[10px] font-mono text-slate-400 uppercase">COMPLETED DISPUTES</div>
+              <div className="text-2xl font-bold text-emerald-400 mt-1">5</div>
+            </div>
+            <div className={`p-4 rounded-xl border ${cardClass}`}>
+              <div className="text-[10px] font-mono text-slate-400 uppercase">REJECTED DISPUTES</div>
+              <div className="text-2xl font-bold text-slate-400 mt-1">0</div>
+            </div>
+          </div>
+
+          {/* Disputes Table */}
+          <div className={`rounded-2xl border overflow-hidden ${cardClass}`}>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead className="bg-slate-900/80 border-b border-slate-800 text-slate-400 uppercase font-mono">
+                  <tr>
+                    <th className="py-3.5 px-4">Dispute ID & Bureau</th>
+                    <th className="py-3.5 px-4">Disputed Account</th>
+                    <th className="py-3.5 px-4">Dispute Description</th>
+                    <th className="py-3.5 px-4">Dispute Submission Date</th>
+                    <th className="py-3.5 px-4">Dispute Status Tracking</th>
+                    <th className="py-3.5 px-4 text-right">Details</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-800/60">
+                  {disputes.map((d) => (
+                    <tr key={d.id} className="hover:bg-slate-800/30">
+                      <td className="py-4 px-4">
+                        <div className="font-mono font-bold text-cyan-400">{d.id}</div>
+                        <span className="text-[11px] text-slate-300">{d.bureau}</span>
+                      </td>
+                      <td className="py-4 px-4 font-bold text-white">{d.account}</td>
+                      <td className="py-4 px-4 text-slate-300">{d.type}</td>
+                      <td className="py-4 px-4 font-mono text-slate-400">{d.date}</td>
+                      <td className="py-4 px-4">
+                        <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${
+                          d.status.includes('Completed') ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30' :
+                          'bg-amber-500/10 text-amber-400 border border-amber-500/30'
+                        }`}>
+                          {d.status}
+                        </span>
+                        <span className="text-[10px] text-slate-400 block mt-0.5">{d.result}</span>
+                      </td>
+                      <td className="py-4 px-4 text-right">
+                        <button 
+                          onClick={() => showToast(`Dispute Response History: Viewing Certified Bureau Packet for ${d.id}`)}
+                          className="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-cyan-400 text-xs font-semibold"
+                        >
+                          Response History
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 6. DOCUMENT MANAGEMENT VIEW
+    // ==========================================
+    const UserDocumentManagementView = ({ onOpenModal, showToast, isDark }) => {
+      const documents = [
+        { id: "DOC-01", name: "Driver's License (Front & Back)", category: "Upload Identity Documents", date: "May 10, 2026", status: "Verified" },
+        { id: "DOC-02", name: "ComEd Electric Utility Bill", category: "Upload Address Proof", date: "Oct 15, 2026", status: "Attention Needed (Expired)" },
+        { id: "DOC-03", name: "Experian Tri-Merge Report (Oct)", category: "Upload Credit Reports", date: "Oct 20, 2026", status: "Verified" },
+        { id: "DOC-04", name: "Chase Checking Bank Statement", category: "Upload Bank Statements", date: "Sep 28, 2026", status: "Verified" },
+        { id: "DOC-05", name: "FTC Identity Theft Affidavit", category: "Upload Supporting Evidence", date: "May 12, 2026", status: "Verified" }
+      ];
+
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Document Management & KYC Verification Vault
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Upload Identity Documents, Upload Address Proof, Upload Credit Reports, Upload Bank Statements, Upload Supporting Evidence, View Uploaded Documents, Document Verification Status, Download Documents & Delete / Replace Documents.
+              </p>
+            </div>
+            <button 
+              onClick={() => onOpenModal('uploadDoc')}
+              className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-xs flex items-center gap-2"
+            >
+              <IconFolder className="w-3.5 h-3.5 inline mr-1.5 text-amber-400" /> UPLOAD NEW DOCUMENT
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {documents.map((doc) => (
+              <div key={doc.id} className={`p-5 rounded-2xl border flex flex-col justify-between ${cardClass}`}>
+                <div>
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-800">
+                    <span className="text-[10px] font-mono text-cyan-400 font-bold">{doc.id}</span>
+                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${doc.status === 'Verified' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30' : 'bg-amber-500/10 text-amber-400 border border-amber-500/30'}`}>
+                      Document Verification Status: {doc.status}
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white text-sm mt-3">{doc.name}</h4>
+                  <div className="text-xs text-slate-400 mt-1">{doc.category}</div>
+                  <div className="text-[10px] text-slate-500 font-mono mt-1">Uploaded: {doc.date}</div>
+                </div>
+                <div className="mt-4 pt-3 border-t border-slate-800 flex gap-2">
+                  <button 
+                    onClick={() => showToast(`Download Documents: ${doc.name}`)}
+                    className="w-1/2 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold"
+                  >
+                    Download
+                  </button>
+                  <button 
+                    onClick={() => onOpenModal('uploadDoc')}
+                    className="w-1/2 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-xs font-semibold"
+                  >
+                    Replace
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 7. CREDIT MONITORING VIEW
+    // ==========================================
+    const UserCreditMonitoringView = ({ showToast, isDark }) => {
+      const alerts = [
+        { type: "Credit Score Updates", title: "Score Increased by +24 Points", desc: "TransUnion updated following deletion of Capital One late payment.", time: "Yesterday" },
+        { type: "Credit Utilization Changes", title: "Utilization Dropped to 14%", desc: "Your balance reduction was verified across all three bureaus.", time: "Nov 05, 2026" },
+        { type: "New Account Alerts", title: "Zero Unauthorized Accounts", desc: "No new accounts detected on your credit profile during monthly sweep.", time: "Nov 01, 2026" },
+        { type: "Credit Inquiry Alerts", title: "Inquiry Scan Clean", desc: "Zero new hard inquiries recorded in the last 30 days.", time: "Oct 28, 2026" },
+        { type: "Credit Report Changes", title: "Tradeline Deletion Confirmed", desc: "Experian removed contested medical collection tradeline.", time: "Oct 24, 2026" },
+        { type: "Payment History Updates", title: "100% On-Time Payment Reported", desc: "Positive monthly payment activity verified on all revolving lines.", time: "Oct 20, 2026" }
+      ];
+
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                24/7 Credit Monitoring & Sentinel Alerts
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Credit Score Updates, Credit Report Changes, New Account Alerts, Credit Inquiry Alerts, Payment History Updates, Credit Utilization Changes & Monthly Monitoring Reports.
+              </p>
+            </div>
+            <button 
+              onClick={() => showToast("Downloading Monthly Monitoring Reports PDF...")}
+              className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-xs flex items-center gap-2"
+            >
+              <IconAnalytics className="w-3.5 h-3.5 inline mr-1.5 text-emerald-400" /> MONTHLY MONITORING REPORTS
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {alerts.map((a, idx) => (
+              <div key={idx} className={`p-5 rounded-2xl border ${cardClass}`}>
+                <div className="flex items-center justify-between text-xs pb-2 border-b border-slate-800">
+                  <span className="font-mono text-cyan-400 font-bold">{a.type}</span>
+                  <span className="text-slate-500">{a.time}</span>
+                </div>
+                <h4 className="font-bold text-white text-base mt-2">{a.title}</h4>
+                <p className="text-xs text-slate-300 mt-1">{a.desc}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 8. MY IMPROVEMENT PLAN VIEW
+    // ==========================================
+    const UserImprovementPlanView = ({ showToast, isDark }) => {
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Personalized Credit Improvement Plan
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Personalized Plan, Recommended Actions, Credit Utilization Goals, Payment Management Tips, Debt Suggestions & Milestones.
+              </p>
+            </div>
+            <div className="px-4 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-bold text-xs">
+              Next Goal: 720+ FICO (Estimated Jan 2027)
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Recommended Actions (2 cols) */}
+            <div className={`p-6 rounded-2xl border lg:col-span-2 ${cardClass}`}>
+              <h3 className={`font-display font-bold text-base mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Recommended Actions & Milestone Checklist
+              </h3>
+              <div className="space-y-3">
+                {[
+                  { step: "Step 1", title: "Credit Utilization Goals", desc: "Maintain overall card balance under $1,300 (below 10% of $13,000 combined credit limit).", status: "In Progress (Currently 14%)" },
+                  { step: "Step 2", title: "Payment Management Tips", desc: "Set automatic autopay 3 days prior to statement closing dates rather than due dates to report low balances.", status: "Configured" },
+                  { step: "Step 3", title: "Debt Management Suggestions", desc: "Apply the debt avalanche method to pay down the highest APR card first to save on monthly interest.", status: "Active" },
+                  { step: "Step 4", title: "Monthly Improvement Milestones", desc: "Target 700+ milestone upon removal of the remaining medical collection on Experian.", status: "Pending Bureau Cycle" }
+                ].map((item, idx) => (
+                  <div key={idx} className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-cyan-400 font-bold">{item.step}</span>
+                        <span className="font-bold text-white text-sm">{item.title}</span>
+                      </div>
+                      <p className="text-slate-300 mt-1">{item.desc}</p>
+                    </div>
+                    <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 whitespace-nowrap">
+                      {item.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Specialist Guidance Card (1 col) */}
+            <div className={`p-6 rounded-2xl border flex flex-col justify-between ${cardClass}`}>
+              <div>
+                <h3 className={`font-display font-bold text-base mb-3 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                  Specialist Recommendations
+                </h3>
+                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-full bg-cyan-500 text-slate-950 font-bold flex items-center justify-center text-xs">
+                      SJ
+                    </div>
+                    <div>
+                      <div className="font-bold text-white">Sarah Jenkins, Esq.</div>
+                      <div className="text-[10px] text-slate-400">Assigned Legal Specialist</div>
+                    </div>
+                  </div>
+                  <p className="text-slate-300 italic">
+                    "David, you are doing phenomenal. By keeping your balances below 10% this month and waiting out the Experian 30-day investigation, your score should comfortably breach 715."
+                  </p>
+                </div>
+              </div>
+              <button 
+                onClick={() => showToast("Opening chat messenger with Sarah Jenkins")}
+                className="w-full mt-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs"
+              >
+                Message Specialist
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 9. SUBSCRIPTION & PRICING VIEW
+    // ==========================================
+    const UserSubscriptionPricingView = ({ showToast, isDark }) => {
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Subscription & Pricing Plans
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Current Subscription Plan, Available Pricing Plans, Plan Details, Upgrade Subscription, Downgrade Subscription, Cancel Subscription, Subscription Renewal Date & Subscription History.
+              </p>
+            </div>
+            <div className="px-4 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs">
+              Subscription Renewal Date: Dec 10, 2026
+            </div>
+          </div>
+
+          {/* Pricing Plans Comparison */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { id: "standard", name: "Standard Repair", price: "$89", sub: "/mo", isCurrent: false, features: ["5 Inaccuracy disputes/mo", "Tri-bureau dispute letters", "Online progress portal", "Email support"] },
+              { id: "pro", name: "Pro Score Booster", price: "$149", sub: "/mo", isCurrent: true, features: ["15 Inaccuracy disputes/mo", "Dedicated legal specialist", "24/7 Smart monitoring", "Direct chat & phone line", "FCRA 609 certified mail"] },
+              { id: "vip", name: "VIP Legal Defense", price: "$249", sub: "/mo", isCurrent: false, features: ["Unlimited disputes", "Attorney-supervised litigation", "Creditor direct settlement", "Identity theft injunctions", "Priority weekly audits"] }
+            ].map((p) => (
+              <div key={p.id} className={`p-6 rounded-2xl border relative flex flex-col justify-between ${cardClass}`}>
+                {p.isCurrent && (
+                  <span className="absolute top-4 right-4 bg-emerald-500 text-slate-950 font-bold px-2.5 py-0.5 rounded-full text-[10px] uppercase">
+                    Current Subscription Plan
+                  </span>
+                )}
+                <div>
+                  <h3 className={`font-display font-extrabold text-xl ${isDark ? 'text-white' : 'text-slate-900'}`}>{p.name}</h3>
+                  <div className="my-3 flex items-baseline gap-1">
+                    <span className="text-3xl font-display font-black text-emerald-400">{p.price}</span>
+                    <span className="text-xs text-slate-400">{p.sub}</span>
+                  </div>
+                  <div className="space-y-2 mt-4 text-xs">
+                    {p.features.map((f, i) => (
+                      <div key={i} className="flex items-center gap-2 text-slate-300">
+                        <IconCheck className="w-3.5 h-3.5 inline text-emerald-400 mr-1" />
+                        <span>{f}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-6 pt-4 border-t border-slate-800">
+                  {p.isCurrent ? (
+                    <button 
+                      onClick={() => showToast("You are already on the Pro Score Booster plan")}
+                      className="w-full py-2 rounded-xl bg-slate-800 text-slate-400 text-xs font-semibold"
+                    >
+                      Active Plan
+                    </button>
+                  ) : (
+                    <button 
+                      onClick={() => showToast(`Initiated change to ${p.name}`)}
+                      className="w-full py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs"
+                    >
+                      {p.name.includes('VIP') ? 'Upgrade Subscription' : 'Downgrade Subscription'}
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Cancellation Policy Note */}
+          <div className="p-4 rounded-xl border border-slate-800 bg-slate-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+            <span className="text-slate-400">Need to pause or cancel? You can cancel your subscription anytime with zero penalty fees.</span>
+            <button 
+              onClick={() => showToast("Cancel Subscription request initiated. A specialist will reach out within 2 hours.")}
+              className="px-3 py-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 font-semibold border border-rose-500/30 whitespace-nowrap"
+            >
+              Cancel Subscription
+            </button>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 10. PAYMENTS & INVOICES VIEW
+    // ==========================================
+    const UserPaymentsInvoicesView = ({ showToast, isDark }) => {
+      const invoices = [
+        { id: "INV-9021", date: "Nov 02, 2026", amount: "$149.00", method: "Visa ending 4821", status: "Completed Payments" },
+        { id: "INV-8419", date: "Oct 02, 2026", amount: "$149.00", method: "Visa ending 4821", status: "Completed Payments" },
+        { id: "INV-7812", date: "Sep 02, 2026", amount: "$149.00", method: "Visa ending 4821", status: "Completed Payments" }
+      ];
+
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Payments & Billing Invoices
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Pending Payments, Completed Payments, Payment History, Payment Methods, Download Invoices & Payment Confirmation.
+              </p>
+            </div>
+            <button 
+              onClick={() => showToast("Add new payment card modal opened")}
+              className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-xs flex items-center gap-2"
+            >
+              <IconCreditCard className="w-3.5 h-3.5 inline mr-1.5 text-cyan-400" /> UPDATE PAYMENT METHODS
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className={`p-5 rounded-2xl border ${cardClass}`}>
+              <div className="text-[10px] font-mono text-slate-400 uppercase">PENDING PAYMENTS</div>
+              <div className="text-2xl font-bold text-emerald-400 mt-1">$0.00</div>
+              <div className="text-xs text-slate-500 mt-1">Payment Confirmation: Current</div>
+            </div>
+            <div className={`p-5 rounded-2xl border ${cardClass}`}>
+              <div className="text-[10px] font-mono text-slate-400 uppercase">PAYMENT METHODS</div>
+              <div className="text-lg font-bold text-white mt-1">Visa ending 4821</div>
+              <div className="text-xs text-slate-400 mt-1">Expires 09/2028 • Default</div>
+            </div>
+            <div className={`p-5 rounded-2xl border ${cardClass}`}>
+              <div className="text-[10px] font-mono text-slate-400 uppercase">NEXT RECURRING INVOICE</div>
+              <div className="text-lg font-bold text-cyan-400 mt-1">$149.00</div>
+              <div className="text-xs text-slate-400 mt-1">Scheduled for Dec 02, 2026</div>
+            </div>
+          </div>
+
+          {/* Invoices History Table */}
+          <div className={`rounded-2xl border overflow-hidden ${cardClass}`}>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead className="bg-slate-900/80 border-b border-slate-800 text-slate-400 uppercase font-mono">
+                  <tr>
+                    <th className="py-3 px-4">Invoice #</th>
+                    <th className="py-3 px-4">Billing Date</th>
+                    <th className="py-3 px-4">Amount</th>
+                    <th className="py-3 px-4">Payment Methods</th>
+                    <th className="py-3 px-4">Status</th>
+                    <th className="py-3 px-4 text-right">Download Invoices</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-800/60">
+                  {invoices.map((inv) => (
+                    <tr key={inv.id} className="hover:bg-slate-800/30">
+                      <td className="py-3.5 px-4 font-mono font-bold text-cyan-400">{inv.id}</td>
+                      <td className="py-3.5 px-4 font-mono text-slate-400">{inv.date}</td>
+                      <td className="py-3.5 px-4 font-bold text-emerald-400">{inv.amount}</td>
+                      <td className="py-3.5 px-4 text-slate-300">{inv.method}</td>
+                      <td className="py-3.5 px-4">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                          {inv.status}
+                        </span>
+                      </td>
+                      <td className="py-3.5 px-4 text-right">
+                        <button 
+                          onClick={() => showToast(`Download Invoices: PDF Receipt for ${inv.id}`)}
+                          className="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-cyan-400 font-semibold"
+                        >
+                          Download Invoices
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 11. NOTIFICATIONS VIEW
+    // ==========================================
+    const UserNotificationsView = ({ showToast, isDark }) => {
+      const notifications = [
+        { title: "Credit Score Update Alerts", desc: "TransUnion FICO score jumped +24 points to 690.", time: "Yesterday at 11:30 AM", type: "Credit Score" },
+        { title: "Dispute Status Notifications", desc: "Equifax verified deletion of Capital One late payment tradeline.", time: "2 days ago", type: "Disputes" },
+        { title: "Document Upload Confirmation", desc: "Utility statement uploaded securely to KYC vault.", time: "Nov 06, 2026", type: "Documents" },
+        { title: "Document Verification Alerts", desc: "Driver's License verified by legal compliance team.", time: "Nov 05, 2026", type: "Verification" },
+        { title: "Subscription Renewal Reminders", desc: "Pro Score Booster subscription renewed successfully ($149.00).", time: "Nov 02, 2026", type: "Subscription" },
+        { title: "Payment Notifications", desc: "Automatic card payment receipt generated for Invoice #9021.", time: "Nov 02, 2026", type: "Billing" },
+        { title: "Company Announcements", desc: "New automated E-OSCAR bureau bridge deployed for faster responses.", time: "Oct 25, 2026", type: "Announcements" }
+      ];
+
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Client Notifications & Alerts Center
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Credit Score Update Alerts, Dispute Status Notifications, Document Upload Confirmation, Document Verification Alerts, Subscription Renewal Reminders, Payment Notifications & Company Announcements.
+              </p>
+            </div>
+            <button 
+              onClick={() => showToast("All notifications marked as read")}
+              className="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-4 py-2 rounded-xl text-xs border border-slate-700"
+            >
+              Mark All as Read
+            </button>
+          </div>
+
+          <div className="space-y-3">
+            {notifications.map((n, idx) => (
+              <div key={idx} className={`p-4 rounded-xl border flex items-center justify-between text-xs ${cardClass}`}>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold text-white text-sm">{n.title}</span>
+                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">{n.type}</span>
+                  </div>
+                  <p className="text-slate-300 mt-1">{n.desc}</p>
+                </div>
+                <span className="text-slate-500 font-mono text-[10px] whitespace-nowrap ml-4">{n.time}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 12. COMMUNICATION VIEW
+    // ==========================================
+    const UserCommunicationView = ({ showToast, isDark }) => {
+      const [msgText, setMsgText] = useState("");
+      const [messages, setMessages] = useState([
+        { sender: "Sarah Jenkins, Esq.", role: "Specialist", text: "Hello David! I have reviewed your October Experian update. The medical collection dispute is in its final statutory week.", time: "Yesterday, 3:45 PM" },
+        { sender: "David Chen", role: "You", text: "Thank you Sarah! Will I be notified immediately when Experian responds?", time: "Yesterday, 4:10 PM" },
+        { sender: "Sarah Jenkins, Esq.", role: "Specialist", text: "Yes, you will receive an instant SMS alert and email update as soon as the bureau transmits the confirmation.", time: "Yesterday, 4:15 PM" }
+      ]);
+
+      const handleSendMessage = (e) => {
+        e.preventDefault();
+        if (!msgText.trim()) return;
+        setMessages([...messages, { sender: "David Chen", role: "You", text: msgText, time: "Just now" }]);
+        setMsgText("");
+        showToast("Message sent to Specialist Sarah Jenkins");
+      };
+
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Direct Specialist Communication
+              </h1>
+              <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                Contact Credit Specialist, Send Messages, View Support Replies, Consultation Requests & Support Ticket History.
+              </p>
+            </div>
+            <button 
+              onClick={() => showToast("Opening 1-on-1 strategy call booking calendar...")}
+              className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-xs flex items-center gap-2"
+            >
+              <IconCalendar className="w-3.5 h-3.5 inline mr-1.5 text-emerald-400" /> REQUEST CONSULTATION CALL
+            </button>
+          </div>
+
+          <div className={`p-6 rounded-2xl border flex flex-col justify-between h-[450px] ${cardClass}`}>
+            {/* Chat Messages Log */}
+            <div className="space-y-3 overflow-y-auto pr-2 custom-scrollbar">
+              {messages.map((m, idx) => {
+                const isMe = m.role === "You";
+                return (
+                  <div key={idx} className={`flex flex-col ${isMe ? 'items-end' : 'items-start'}`}>
+                    <div className="flex items-center gap-2 mb-1 text-[11px] text-slate-400">
+                      <span className="font-bold text-slate-200">{m.sender}</span>
+                      <span>• {m.time}</span>
+                    </div>
+                    <div className={`max-w-md p-3 rounded-2xl text-xs ${
+                      isMe 
+                        ? 'bg-emerald-500 text-slate-950 font-medium rounded-tr-none' 
+                        : 'bg-slate-900 border border-slate-700 text-slate-200 rounded-tl-none'
+                    }`}>
+                      {m.text}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Message Input Box */}
+            <form onSubmit={handleSendMessage} className="mt-4 pt-3 border-t border-slate-800 flex gap-2">
+              <input 
+                type="text" 
+                placeholder="Type your message to Sarah Jenkins, Esq..."
+                value={msgText}
+                onChange={e => setMsgText(e.target.value)}
+                className="flex-1 p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-cyan-400"
+              />
+              <button 
+                type="submit" 
+                className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // 13. FEEDBACK & REVIEWS VIEW
+    // ==========================================
+    const UserFeedbackReviewsView = ({ showToast, isDark }) => {
+      const [rating, setRating] = useState(5);
+      const [feedbackText, setFeedbackText] = useState("");
+      const [complaintText, setComplaintText] = useState("");
+
+      const handleSubmitFeedback = (e) => {
+        e.preventDefault();
+        showToast(`Thank you! Your ${rating}-Star feedback was submitted.`);
+        setFeedbackText("");
+      };
+
+      const handleSubmitComplaint = (e) => {
+        e.preventDefault();
+        showToast("Complaint submitted. Our Compliance Director will review within 24 hours.");
+        setComplaintText("");
+      };
+
+      const cardClass = isDark ? "bg-[#0b1224]/90 border-slate-800/80 shadow-2xl" : "bg-white border-slate-200 shadow-lg";
+
+      return (
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }} className="space-y-6">
+          <div>
+            <h1 className={`text-2xl lg:text-3xl font-display font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+              Feedback, Reviews & Service Ratings
+            </h1>
+            <p className={`text-sm mt-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+              Submit Feedback, Rate Our Services, Submit Complaints & View Past Feedback History.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Submit Feedback & Rating */}
+            <div className={`p-6 rounded-2xl border ${cardClass}`}>
+              <h3 className={`font-display font-bold text-base mb-3 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Rate Our Services
+              </h3>
+              <form onSubmit={handleSubmitFeedback} className="space-y-4 text-xs">
+                <div>
+                  <label className="block text-slate-400 font-semibold mb-1">Your Rating</label>
+                  <div className="flex gap-2">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <button 
+                        key={star} 
+                        type="button" 
+                        onClick={() => setRating(star)}
+                        className={`p-1 transition-transform hover:scale-125 ${star <= rating ? 'text-amber-400' : 'text-slate-700'}`}
+                      >
+                        <IconStar className="w-6 h-6 fill-current" />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-slate-400 font-semibold mb-1">Your Feedback & Experience</label>
+                  <textarea 
+                    rows="3" 
+                    required
+                    placeholder="Tell us how our team and dispute specialists have helped you..."
+                    value={feedbackText}
+                    onChange={e => setFeedbackText(e.target.value)}
+                    className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                  ></textarea>
+                </div>
+                <button type="submit" className="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold">
+                  Submit Feedback
+                </button>
+              </form>
+            </div>
+
+            {/* Submit Complaints Ticket */}
+            <div className={`p-6 rounded-2xl border ${cardClass}`}>
+              <h3 className={`font-display font-bold text-base mb-3 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Submit Complaints or Concerns
+              </h3>
+              <form onSubmit={handleSubmitComplaint} className="space-y-4 text-xs">
+                <div>
+                  <label className="block text-slate-400 font-semibold mb-1">Complaint / Escalation Description</label>
+                  <textarea 
+                    rows="4" 
+                    required
+                    placeholder="If you have any issue regarding your dispute filings or specialist communication, detail it here for executive review..."
+                    value={complaintText}
+                    onChange={e => setComplaintText(e.target.value)}
+                    className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200"
+                  ></textarea>
+                </div>
+                <button type="submit" className="px-5 py-2 rounded-xl bg-rose-500 hover:bg-rose-400 text-white font-bold">
+                  Submit Formal Complaint
+                </button>
+              </form>
+            </div>
+          </div>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // MODALS: NEW DISPUTE, UPLOAD DOC, LOGOUT CONFIRM
+    // ==========================================
+    const UserNewDisputeModal = ({ isOpen, onClose, showToast }) => {
+      const [formData, setFormData] = useState({ bureau: "Equifax", account: "Capital One Auto", reason: "Incorrect reporting date and duplicate balance" });
+      if (!isOpen) return null;
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        showToast(`Dispute submitted for ${formData.account} with ${formData.bureau}!`);
+        onClose();
+      };
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-[#0b1329] border border-slate-700/80 rounded-2xl p-6 max-w-md w-full shadow-2xl text-slate-100">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+              <h3 className="font-display font-bold text-lg text-white flex items-center gap-2">
+                <IconScale className="w-4 h-4 inline mr-1.5 text-cyan-400" /> Submit New Dispute Request
+              </h3>
+              <button onClick={onClose} className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800"><IconX className="w-4 h-4" /></button>
+            </div>
+            <form onSubmit={handleSubmit} className="space-y-4 mt-4 text-xs">
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1">Select Credit Bureau</label>
+                <select value={formData.bureau} onChange={e=>setFormData({...formData, bureau: e.target.value})} className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200">
+                  <option>Equifax</option>
+                  <option>Experian</option>
+                  <option>TransUnion</option>
+                  <option>All 3 Bureaus</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1">Select Disputed Account / Furnisher</label>
+                <input required type="text" placeholder="e.g. Midland Credit / Capital One / Portfolio" value={formData.account} onChange={e=>setFormData({...formData, account: e.target.value})} className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200" />
+              </div>
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1">Dispute Description & Supporting Facts</label>
+                <textarea rows="3" required value={formData.reason} onChange={e=>setFormData({...formData, reason: e.target.value})} className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200" placeholder="Explain why this account is inaccurate or misleading..."></textarea>
+              </div>
+              <div className="border border-dashed border-slate-700 rounded-xl p-3 text-center bg-slate-900/50">
+                <span className="text-cyan-400 text-xs font-semibold cursor-pointer"><IconPaperclip className="w-3.5 h-3.5 inline mr-1 text-cyan-400" /> Upload Supporting Evidence (PDF/JPG)</span>
+              </div>
+              <div className="flex justify-end gap-2 pt-4 border-t border-slate-800">
+                <button type="button" onClick={onClose} className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold">Cancel</button>
+                <button type="submit" className="px-5 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold">Submit Dispute</button>
+              </div>
+            </form>
+          </motion.div>
+        </div>
+      );
+    };
+
+    const UserUploadDocModal = ({ isOpen, onClose, showToast }) => {
+      const [fileName, setFileName] = useState("Utility_Statement_Oct2026.pdf");
+      if (!isOpen) return null;
+
+      const handleUpload = (e) => {
+        e.preventDefault();
+        showToast("Document uploaded securely to your client vault!");
+        onClose();
+      };
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-[#0b1329] border border-slate-700/80 rounded-2xl p-6 max-w-md w-full shadow-2xl text-slate-100">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+              <h3 className="font-display font-bold text-lg text-white flex items-center gap-2">
+                <IconFolder className="w-4 h-4 inline mr-1.5 text-amber-400" /> Upload Verification Document
+              </h3>
+              <button onClick={onClose} className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800"><IconX className="w-4 h-4" /></button>
+            </div>
+            <form onSubmit={handleUpload} className="space-y-4 mt-4 text-xs">
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1">Document Category</label>
+                <select className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200">
+                  <option>Proof of Address (Utility Bill, Cable, Bank Statement)</option>
+                  <option>Proof of Identity (State Driver's License, Passport)</option>
+                  <option>Dispute Supporting Evidence (Receipt, FTC Affidavit)</option>
+                  <option>Credit Report (Tri-Merge PDF)</option>
+                </select>
+              </div>
+              <div className="border-2 border-dashed border-slate-700 rounded-2xl p-6 text-center bg-slate-900/40">
+                <IconFileText className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
+                <div className="font-semibold text-slate-200">{fileName}</div>
+                <div className="text-[11px] text-slate-500 mt-1">Encrypted with AES-256 for FCRA verification</div>
+              </div>
+              <div className="flex justify-end gap-2 pt-4 border-t border-slate-800">
+                <button type="button" onClick={onClose} className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold">Cancel</button>
+                <button type="submit" className="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold">Secure Upload</button>
+              </div>
+            </form>
+          </motion.div>
+        </div>
+      );
+    };
+
+    const UserLogoutConfirmModal = ({ isOpen, onClose }) => {
+      if (!isOpen) return null;
+
+      const handleConfirmLogout = () => {
+        window.location.href = "index.html";
+      };
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-[#0b1329] border border-rose-500/40 rounded-2xl p-6 max-w-sm w-full shadow-2xl text-slate-100 text-center">
+            <div className="w-12 h-12 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 flex items-center justify-center mx-auto mb-3">
+              <IconLogout className="w-6 h-6" />
+            </div>
+            <h3 className="font-display font-bold text-lg text-white">
+              Sign Out of Client Portal
+            </h3>
+            <p className="text-xs text-slate-400 mt-2">
+              Are you sure you want to log out? Your credit monitoring and dispute timers will continue running securely in the background.
+            </p>
+            <div className="flex gap-2 mt-6">
+              <button onClick={onClose} className="w-1/2 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs">
+                Cancel
+              </button>
+              <button onClick={handleConfirmLogout} className="w-1/2 py-2 rounded-xl bg-rose-500 hover:bg-rose-400 text-white font-bold text-xs shadow-lg shadow-rose-500/30">
+                Sign Out
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      );
+    };
+
+    // --- TOAST NOTIFICATION ---
+    const Toast = ({ message, onClose }) => {
+      if (!message) return null;
+      return (
+        <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 50, opacity: 0 }} className="fixed bottom-6 right-6 z-50 bg-[#0b1736] border border-emerald-400/50 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 text-xs">
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+          <span className="font-medium">{message}</span>
+          <button onClick={onClose} className="text-slate-400 hover:text-white ml-2 p-1 rounded-lg hover:bg-slate-800"><IconX className="w-4 h-4" /></button>
+        </motion.div>
+      );
+    };
+
+    // ==========================================
+    // TOP NAVIGATION BAR (WITH MOBILE & TABLET HAMBURGER MENU)
+    // ==========================================
+    const UserTopNavbar = ({ isDark, setIsDark, dir, setDir, onOpenLogout, showToast, activeTab, setActiveTab }) => {
+      const [showProfileMenu, setShowProfileMenu] = useState(false);
+      const [showNotifications, setShowNotifications] = useState(false);
+      const [showPagesMenu, setShowPagesMenu] = useState(false);
+      const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+      const [mobilePagesExpanded, setMobilePagesExpanded] = useState(false);
+
+      useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth >= 1024) {
+            setIsMobileMenuOpen(false);
+          }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+
+      const toggleTheme = () => {
+        const nextDark = !isDark;
+        setIsDark(nextDark);
+        if (nextDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        showToast(`Theme switched to ${nextDark ? 'Dark' : 'Light'} Mode`);
+      };
+
+      const toggleDir = () => {
+        const nextDir = dir === 'ltr' ? 'rtl' : 'ltr';
+        setDir(nextDir);
+        document.documentElement.setAttribute('dir', nextDir);
+        showToast(`Layout orientation: ${nextDir.toUpperCase()}`);
+      };
+
+      const handleMobileNavClick = (tabId) => {
+        setActiveTab(tabId);
+        setIsMobileMenuOpen(false);
+      };
+
+      // Prevent background scrolling when mobile menu drawer is open
+      useEffect(() => {
+        if (isMobileMenuOpen) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+        return () => {
+          document.body.style.overflow = '';
+        };
+      }, [isMobileMenuOpen]);
+
+      return (
+        <>
+          <header className="sticky top-0 z-40 w-full bg-[#050914]/90 dark:bg-[#050914]/95 backdrop-blur-md border-b border-slate-800/80 px-4 lg:px-8 py-3">
+            <div className="flex items-center justify-between w-full">
+              {/* Left: Brand Logo in mobile/tablet view; Brand Logo + CLIENT badge in desktop view */}
+              <div className="flex items-center gap-3">
+                <BrandLogo isDark={isDark} />
+                <span className="hidden lg:inline-flex px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-extrabold uppercase tracking-widest">
+                  PORTAL
+                </span>
+              </div>
+
+              {/* Right: Hamburger button for Mobile & Tablet (< lg) */}
+              <div className="lg:hidden flex items-center">
+                <button 
+                  type="button"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  aria-label="Toggle navigation menu"
+                  className="w-10 h-10 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-center text-slate-200 hover:text-white hover:border-emerald-500/50 transition-all focus:outline-none shadow-sm"
+                >
+                  {isMobileMenuOpen ? (
+                    <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  ) : (
+                    <svg className="w-5 h-5 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  )}
+                </button>
+              </div>
+
+              {/* Right: Desktop Action Controls (hidden in mobile and tablet: hidden lg:flex) */}
+              <div className="hidden lg:flex items-center gap-3">
+                {/* Back to Home Button */}
+                <a 
+                  href="index.html" 
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 text-xs font-semibold text-slate-300 hover:text-white transition-colors"
+                >
+                  <span>←</span>
+                  <span>Back to Home</span>
+                </a>
+
+                {/* Website Pages Dropdown */}
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={() => setShowPagesMenu(!showPagesMenu)}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 text-xs font-semibold text-slate-300 hover:text-white transition-colors"
+                  >
+                    <span>🌐 Website Pages</span>
+                    <span className="text-[10px] text-slate-400">▾</span>
+                  </button>
+                  {showPagesMenu && (
+                    <div className="absolute left-0 mt-2 w-52 rounded-xl bg-[#091024] border border-slate-700 shadow-2xl p-1.5 z-50 text-xs space-y-1">
+                      <a href="index.html" className="w-full px-3 py-1.5 rounded-lg text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+                        <span>Home 1</span>
+                      </a>
+                      <a href="home-2.html" className="w-full px-3 py-1.5 rounded-lg text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+                        <span>Home 2</span>
+                      </a>
+                      <a href="about.html" className="w-full px-3 py-1.5 rounded-lg text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+                        <span>About</span>
+                      </a>
+                      <a href="services.html" className="w-full px-3 py-1.5 rounded-lg text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+                        <span>Services</span>
+                      </a>
+                      <a href="credit-repair.html" className="w-full px-3 py-1.5 rounded-lg text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+                        <span>Credit Repair</span>
+                      </a>
+                      <a href="plans.html" className="w-full px-3 py-1.5 rounded-lg text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+                        <span>Plans</span>
+                      </a>
+                      <a href="resources.html" className="w-full px-3 py-1.5 rounded-lg text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+                        <span>Resources</span>
+                      </a>
+                      <a href="contact.html" className="w-full px-3 py-1.5 rounded-lg text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+                        <span>Contact</span>
+                      </a>
+                      <div className="pt-1 border-t border-slate-800"></div>
+                      <a href="admin-dashboard.html" className="w-full px-3 py-1.5 rounded-lg text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+                        <span>Admin Dashboard</span>
+                      </a>
+                      <a href="user-dashboard.html" className="w-full px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 font-bold flex items-center justify-between">
+                        <span>User Dashboard</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                      </a>
+                    </div>
+                  )}
+                </div>
+
+                {/* Dark / Light Toggle */}
+                <button 
+                  onClick={toggleTheme}
+                  title="Toggle Dark / Light Mode"
+                  className="w-9 h-9 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 flex items-center justify-center text-amber-400 transition-colors"
+                >
+                  {isDark ? '☀️' : '🌙'}
+                </button>
+
+                {/* Direction Toggle (LTR/RTL) */}
+                <button 
+                  onClick={toggleDir}
+                  title="Toggle LTR / RTL Direction"
+                  className="w-9 h-9 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 flex items-center justify-center text-slate-300 font-mono text-xs font-bold transition-colors"
+                >
+                  ⇄
+                </button>
+
+                {/* Notification Bell */}
+                <div className="relative">
+                  <button 
+                    onClick={() => setShowNotifications(!showNotifications)}
+                    className="w-9 h-9 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 flex items-center justify-center text-slate-300 relative transition-colors"
+                  >
+                    <span>🔔</span>
+                    <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-rose-500 text-white font-mono text-[9px] font-bold flex items-center justify-center">
+                      3
+                    </span>
+                  </button>
+
+                  {showNotifications && (
+                    <div className="absolute right-0 mt-2 w-72 rounded-2xl bg-[#091024] border border-slate-700 shadow-2xl p-3 z-50 text-xs">
+                      <div className="font-bold text-white pb-2 border-b border-slate-800 flex justify-between items-center">
+                        <span>Recent Client Alerts</span>
+                        <span className="text-[10px] text-cyan-400">Mark read</span>
+                      </div>
+                      <div className="space-y-2 mt-2">
+                        <div className="p-2 rounded bg-slate-900 text-slate-300">
+                          <span className="text-emerald-400 font-bold block">Credit Score +24 Pts</span>
+                          Experian updated after late payment tradeline removal.
+                        </div>
+                        <div className="p-2 rounded bg-slate-900 text-slate-300">
+                          <span className="text-cyan-400 font-bold block">Dispute Dispatched</span>
+                          Round 2 statutory notice sent to TransUnion via Certified Mail.
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* User Profile Pill */}
+                <div className="relative">
+                  <button 
+                    onClick={() => setShowProfileMenu(!showProfileMenu)}
+                    className="flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 transition-colors"
+                  >
+                    <div className="w-6 h-6 rounded-full bg-emerald-500 text-slate-950 font-bold flex items-center justify-center text-[10px]">
+                      DC
+                    </div>
+                    <span className="font-semibold">David Chen</span>
+                    <span className="text-[10px] text-slate-400">▾</span>
+                  </button>
+
+                  {showProfileMenu && (
+                    <div className="absolute right-0 mt-2 w-48 rounded-xl bg-[#091024] border border-slate-700 shadow-2xl p-2 z-50 text-xs">
+                      <div className="px-3 py-1.5 text-slate-400 border-b border-slate-800 font-mono text-[10px]">
+                        Client ID: CRS-84920
+                      </div>
+                      <button onClick={() => { setShowProfileMenu(false); showToast("Opened Security Profile"); }} className="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-200">
+                        Account Settings
+                      </button>
+                      <button onClick={() => { setShowProfileMenu(false); onOpenLogout(); }} className="w-full text-left px-3 py-2 rounded-lg hover:bg-rose-500/20 text-rose-400 font-semibold">
+                        Sign Out / Logout
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </header>
+
+          {/* Mobile & Tablet Full-Height Overlay Drawer */}
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.22, ease: "easeOut" }}
+                className={`lg:hidden fixed inset-x-0 top-[64px] bottom-0 z-50 overflow-y-auto min-h-[calc(100vh-64px)] ${
+                  isDark ? 'bg-[#060b18] text-white' : 'bg-slate-900 text-white'
+                } border-t border-slate-800/80 shadow-2xl`}
+              >
+                <div className="p-4 sm:p-6 space-y-4 max-w-lg mx-auto w-full pb-28">
+                  {/* User Profile Card + Badge */}
+                  <div className="p-3.5 rounded-2xl bg-[#0b1429] border border-slate-700/70 flex items-center justify-between shadow-md">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-emerald-500 text-slate-950 font-bold flex items-center justify-center text-sm shadow-[0_0_12px_rgba(16,185,129,0.4)]">
+                        DC
+                      </div>
+                      <div>
+                        <div className="font-bold text-sm text-white">David Chen</div>
+                        <div className="text-[11px] text-emerald-400 font-mono font-bold">684 FICO (+144 pts) • Pro Member</div>
+                      </div>
+                    </div>
+                    <span className="px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-bold uppercase">
+                      CLIENT
+                    </span>
+                  </div>
+
+                  {/* Quick System Actions Row: Back to Home, Theme Toggle, Direction Toggle, Notification Button */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    <a
+                      href="index.html"
+                      className="py-2.5 px-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-xs font-semibold text-slate-300 hover:text-white flex items-center justify-center gap-1.5 transition-colors text-center"
+                    >
+                      <span>←</span>
+                      <span>Back Home</span>
+                    </a>
+
+                    <button
+                      type="button"
+                      onClick={toggleTheme}
+                      className="py-2.5 px-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      <span>{isDark ? '☀️' : '🌙'}</span>
+                      <span>{isDark ? 'Light' : 'Dark'} Mode</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={toggleDir}
+                      className="py-2.5 px-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-xs font-semibold text-slate-300 hover:text-white flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      <span>⇄</span>
+                      <span>Dir: {dir.toUpperCase()}</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => showToast("3 Unread Alerts: FICO +24 pts and 2 bureau updates")}
+                      className="py-2.5 px-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center justify-center gap-1.5 transition-colors relative"
+                    >
+                      <span>🔔</span>
+                      <span>Alerts (3)</span>
+                    </button>
+                  </div>
+
+                  {/* Website Pages Dropdown for Mobile & Tablet */}
+                  <div className="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden">
+                    <button
+                      type="button"
+                      onClick={() => setMobilePagesExpanded(!mobilePagesExpanded)}
+                      className="w-full p-3 flex items-center justify-between text-xs font-bold text-slate-200 hover:bg-slate-800/60 transition-colors"
+                    >
+                      <span className="flex items-center gap-2">
+                        <span>🌐</span>
+                        <span>All Website Pages</span>
+                      </span>
+                      <span className="text-slate-400 text-[10px]">{mobilePagesExpanded ? '▲' : '▼'}</span>
+                    </button>
+                    {mobilePagesExpanded && (
+                      <div className="p-2 space-y-1 bg-slate-950/60 border-t border-slate-800 text-xs">
+                        <a href="index.html" className="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Home 1</a>
+                        <a href="home-2.html" className="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Home 2</a>
+                        <a href="about.html" className="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">About</a>
+                        <a href="services.html" className="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Services</a>
+                        <a href="credit-repair.html" className="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Credit Repair</a>
+                        <a href="plans.html" className="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Plans</a>
+                        <a href="resources.html" className="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Resources</a>
+                        <a href="contact.html" className="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Contact</a>
+                        <a href="admin-dashboard.html" className="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800">Admin Dashboard</a>
+                        <a href="user-dashboard.html" className="block px-3 py-2 rounded-lg bg-emerald-500/20 text-emerald-300 font-bold">User Dashboard (Active)</a>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Full Navigation Concept List for Mobile & Tablet */}
+                  <div className="space-y-1.5 pt-1">
+                    <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 px-1 pt-2 pb-1">
+                      Client Portal Modules (13 Services)
+                    </div>
+                    {USER_NAV_ITEMS.map((item) => {
+                      const isActive = activeTab === item.id;
+                      return (
+                        <button
+                          key={item.id}
+                          onClick={() => handleMobileNavClick(item.id)}
+                          className={`w-full text-left px-3.5 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-between transition-all ${
+                            isActive
+                              ? 'bg-emerald-500/15 border-l-4 border-emerald-400 border-y border-r border-emerald-500/30 text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.15)] font-bold'
+                              : 'text-slate-300 hover:text-white hover:bg-slate-800/70 bg-slate-900/50 border border-slate-800/60 font-medium'
+                          }`}
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="flex-shrink-0">{item.icon}</span>
+                            <span>{item.label}</span>
+                          </div>
+                          {item.badge && (
+                            <span className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-bold ${
+                              isActive ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-300'
+                            }`}>
+                              {item.badge}
+                            </span>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Concept 14: Logout in Hamburger Menu */}
+                  <div className="pt-3 pb-6 border-t border-slate-800/80">
+                    <button
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        onOpenLogout();
+                      }}
+                      className="w-full text-left px-3.5 py-2.5 rounded-xl text-xs font-semibold text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 flex items-center gap-2.5 transition-colors border border-rose-500/20 bg-rose-500/5"
+                    >
+                      <IconLogout className="w-4 h-4 text-rose-400" />
+                      <span>Sign Out / Logout</span>
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </>
+      );
+    };
+
+    // ==========================================
+    // SIDEBAR NAVIGATION FOR USER DASHBOARD (13 CONCEPTS + LOGOUT)
+    // ==========================================
+    const USER_NAV_ITEMS = [
+      { id: "overview", label: "Dashboard Overview", icon: <IconOverview className="w-4 h-4 text-emerald-400" />, badge: null },
+      { id: "profile", label: "My Profile", icon: <IconUser className="w-4 h-4 text-cyan-400" />, badge: null },
+      { id: "credit-score", label: "My Credit Score", icon: <IconTrendingUp className="w-4 h-4 text-emerald-400" />, badge: "684" },
+      { id: "credit-reports", label: "My Credit Reports", icon: <IconReports className="w-4 h-4 text-indigo-400" />, badge: null },
+      { id: "disputes", label: "My Disputes", icon: <IconScale className="w-4 h-4 text-rose-400" />, badge: "3" },
+      { id: "documents", label: "Document Management", icon: <IconFolder className="w-4 h-4 text-amber-400" />, badge: "1 Alert" },
+      { id: "monitoring", label: "Credit Monitoring", icon: <IconBell className="w-4 h-4 text-cyan-400" />, badge: null },
+      { id: "improvement-plan", label: "My Improvement Plan", icon: <IconTarget className="w-4 h-4 text-emerald-400" />, badge: "720+" },
+      { id: "pricing", label: "Subscription & Pricing", icon: <IconCreditCard className="w-4 h-4 text-violet-400" />, badge: "Pro" },
+      { id: "payments", label: "Payments & Invoices", icon: <IconCoins className="w-4 h-4 text-amber-400" />, badge: null },
+      { id: "notifications", label: "Notifications", icon: <IconMail className="w-4 h-4 text-blue-400" />, badge: "3" },
+      { id: "communication", label: "Communication", icon: <IconMessageSquare className="w-4 h-4 text-emerald-400" />, badge: "Specialist" },
+      { id: "feedback", label: "Feedback & Reviews", icon: <IconStar className="w-4 h-4 text-amber-400" />, badge: null },
+    ];
+
+    const UserSidebar = ({ activeTab, setActiveTab, onOpenLogout }) => {
+      return (
+        <aside className="hidden lg:flex w-64 lg:w-72 flex-shrink-0 bg-[#060b18]/90 border-r border-slate-800/80 p-4 flex-col justify-between overflow-y-auto custom-scrollbar h-[calc(100vh-61px)]">
+          <div className="space-y-4">
+            {/* Top Client Badge */}
+            <div className="flex items-center justify-between pb-3 border-b border-slate-800/80 px-1">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 rounded bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xs">
+                  <IconShield className="w-3.5 h-3.5 text-emerald-400" />
+                </div>
+                <span className="font-display font-extrabold text-sm tracking-wider uppercase text-emerald-400">
+                  CLIENT PORTAL
+                </span>
+              </div>
+              <span className="text-[10px] font-mono text-cyan-400 bg-slate-900 px-2 py-0.5 rounded">
+                FCRA Legal
+              </span>
+            </div>
+
+            {/* Navigation Concept List (13 items) */}
+            <nav className="space-y-1">
+              {USER_NAV_ITEMS.map((item) => {
+                const isActive = activeTab === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => setActiveTab(item.id)}
+                    className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-between transition-all relative ${
+                      isActive 
+                        ? 'bg-emerald-500/10 border border-emerald-500/40 text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.15)] font-bold' 
+                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900/60'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      {isActive && (
+                        <span className="w-1.5 h-4 rounded-full bg-emerald-400 -ml-1"></span>
+                      )}
+                      <span className="text-sm">{item.icon}</span>
+                      <span className="truncate">{item.label}</span>
+                    </div>
+                    {item.badge && (
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-bold ${
+                        isActive ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-300'
+                      }`}>
+                        {item.badge}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </nav>
+          </div>
+
+          {/* Concept 14: Sign Out / Logout at Bottom of Sidebar */}
+          <div className="pt-4 border-t border-slate-800/80 mt-4">
+            <button
+              onClick={onOpenLogout}
+              className="w-full text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 flex items-center gap-2.5 transition-colors border border-transparent hover:border-rose-500/20"
+            >
+              <IconLogout className="w-4 h-4 text-rose-400" />
+              <span>Sign Out / Logout</span>
+            </button>
+          </div>
+        </aside>
+      );
+    };
+
+    // ==========================================
+    // MAIN APPLICATION CONTAINER (USER DASHBOARD)
+    // ==========================================
+    const UserDashboardApp = () => {
+      const [activeTab, setActiveTab] = useState("overview");
+      const [isDark, setIsDark] = useState(true);
+      const [dir, setDir] = useState("ltr");
+      const [toastMessage, setToastMessage] = useState("");
+      const [modalState, setModalState] = useState({
+        newDispute: false,
+        uploadDoc: false,
+        logoutConfirm: false
+      });
+
+      const showToast = (msg) => {
+        setToastMessage(msg);
+        setTimeout(() => setToastMessage(""), 4000);
+      };
+
+      const handleOpenModal = (name) => {
+        setModalState(prev => ({ ...prev, [name]: true }));
+      };
+
+      const handleCloseModal = (name) => {
+        setModalState(prev => ({ ...prev, [name]: false }));
+      };
+
+      return (
+        <div className={`min-h-screen ${isDark ? 'bg-[#050914]' : 'bg-slate-100'} text-slate-100 flex flex-col font-sans transition-colors duration-300`}>
+          {/* Top Navbar */}
+          <UserTopNavbar 
+            isDark={isDark} 
+            setIsDark={setIsDark} 
+            dir={dir} 
+            setDir={setDir} 
+            onOpenLogout={() => handleOpenModal('logoutConfirm')} 
+            showToast={showToast}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+
+          {/* Body with Sidebar and Main Content Area */}
+          <div className="flex flex-1 overflow-hidden">
+            <UserSidebar 
+              activeTab={activeTab} 
+              setActiveTab={setActiveTab} 
+              onOpenLogout={() => handleOpenModal('logoutConfirm')} 
+            />
+
+            {/* Main Content Workspace */}
+            <main className="flex-1 p-4 lg:p-8 overflow-y-auto custom-scrollbar h-[calc(100vh-61px)]">
+              <AnimatePresence mode="wait">
+                {activeTab === "overview" && <UserOverviewView key="overview" onOpenModal={handleOpenModal} showToast={showToast} isDark={isDark} setActiveTab={setActiveTab} />}
+                {activeTab === "profile" && <UserProfileView key="profile" showToast={showToast} isDark={isDark} />}
+                {activeTab === "credit-score" && <UserCreditScoreView key="credit-score" showToast={showToast} isDark={isDark} />}
+                {activeTab === "credit-reports" && <UserCreditReportsView key="credit-reports" showToast={showToast} isDark={isDark} />}
+                {activeTab === "disputes" && <UserDisputesView key="disputes" onOpenModal={handleOpenModal} showToast={showToast} isDark={isDark} />}
+                {activeTab === "documents" && <UserDocumentManagementView key="documents" onOpenModal={handleOpenModal} showToast={showToast} isDark={isDark} />}
+                {activeTab === "monitoring" && <UserCreditMonitoringView key="monitoring" showToast={showToast} isDark={isDark} />}
+                {activeTab === "improvement-plan" && <UserImprovementPlanView key="improvement-plan" showToast={showToast} isDark={isDark} />}
+                {activeTab === "pricing" && <UserSubscriptionPricingView key="pricing" showToast={showToast} isDark={isDark} />}
+                {activeTab === "payments" && <UserPaymentsInvoicesView key="payments" showToast={showToast} isDark={isDark} />}
+                {activeTab === "notifications" && <UserNotificationsView key="notifications" showToast={showToast} isDark={isDark} />}
+                {activeTab === "communication" && <UserCommunicationView key="communication" showToast={showToast} isDark={isDark} />}
+                {activeTab === "feedback" && <UserFeedbackReviewsView key="feedback" showToast={showToast} isDark={isDark} />}
+              </AnimatePresence>
+            </main>
+          </div>
+
+          {/* Interactive Modals */}
+          <UserNewDisputeModal isOpen={modalState.newDispute} onClose={() => handleCloseModal('newDispute')} showToast={showToast} />
+          <UserUploadDocModal isOpen={modalState.uploadDoc} onClose={() => handleCloseModal('uploadDoc')} showToast={showToast} />
+          <UserLogoutConfirmModal isOpen={modalState.logoutConfirm} onClose={() => handleCloseModal('logoutConfirm')} />
+
+          {/* Interactive Toast Notifications */}
+          <Toast message={toastMessage} onClose={() => setToastMessage("")} />
+        </div>
+      );
+    };
+
+    // Mount to DOM root
+    const rootElement = document.getElementById("root");
+    ReactDOM.createRoot(rootElement).render(<UserDashboardApp />);
+  </script>
+</body>
+</html>

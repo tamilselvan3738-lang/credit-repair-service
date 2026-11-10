@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Portal Login – CREDIT REPAIR SERVICE</title>
+  
+    <!-- Favicon SVG with Brand Logo Emblem -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="alternate icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' width='36' height='36'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230b1b2d'/%3E%3Cstop offset='100%25' stop-color='%2305281e'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2306B6D4'/%3E%3Cstop offset='50%25' stop-color='%2310B981'/%3E%3Cstop offset='100%25' stop-color='%2338BDF8'/%3E%3C/linearGradient%3E%3ClinearGradient id='w' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%2306B6D4'/%3E%3Cstop offset='100%25' stop-color='%2334D399'/%3E%3C/linearGradient%3E%3ClinearGradient id='a' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%2310B981'/%3E%3Cstop offset='100%25' stop-color='%2367E8F9'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FDE047'/%3E%3Cstop offset='100%25' stop-color='%23D97706'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='18' cy='18' r='17.2' fill='%23080d1a' stroke='%2306B6D4' stroke-width='1.5'/%3E%3Crect x='5.5' y='9.5' width='25' height='15.5' rx='2.5' fill='url(%23bg)' stroke='url(%23b)' stroke-width='1.4'/%3E%3Crect x='5.5' y='12.5' width='25' height='2.2' fill='%2306B6D4' fill-opacity='0.3'/%3E%3Crect x='8' y='16.2' width='3.8' height='3' rx='0.6' fill='url(%23g)'/%3E%3Cline x1='9.9' y1='16.2' x2='9.9' y2='19.2' stroke='%2378350F' stroke-width='0.4'/%3E%3Cline x1='8' y1='17.7' x2='11.8' y2='17.7' stroke='%2378350F' stroke-width='0.4'/%3E%3Crect x='13.2' y='16.5' width='4' height='1.1' rx='0.55' fill='%2367E8F9' fill-opacity='0.85'/%3E%3Crect x='18.5' y='16.5' width='4' height='1.1' rx='0.55' fill='%2367E8F9' fill-opacity='0.85'/%3E%3Crect x='13.2' y='18.8' width='5.8' height='1' rx='0.5' fill='%2334D399' fill-opacity='0.8'/%3E%3Cpath d='M10.5 30.5 L17.5 23.5' stroke='url(%23w)' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M16.5 24.5 L20 21 C20.7 20.3 20.7 19.2 20 18.5 L19.7 18.2 C19 17.5 17.9 17.5 17.2 18.2 L15.7 19.7' stroke='url(%23w)' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M14 24.5 L21 17.5 L24 20.2 L29.5 11' stroke='url(%23a)' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M25.5 11 H29.5 V15' stroke='url(%23a)' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='29.5' cy='11' r='1.3' fill='%23FFFFFF'/%3E%3Cpath d='M29.5 8.5 V13.5 M27 11 H32' stroke='%2367E8F9' stroke-width='0.9' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          },
+          colors: {
+            fintech: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#10b981', // vibrant emerald
+              600: '#059669',
+              700: '#047857',
+              cyan: '#06b6d4',
+              electric: '#00f5ff',
+              indigo: '#6366f1',
+              violet: '#8b5cf6',
+              dark: '#030712',
+              card: '#090e1a',
+              cardborder: '#1e293b'
+            }
+          },
+          boxShadow: {
+            '3d-btn': '0 8px 0 #047857, 0 15px 25px rgba(16, 185, 129, 0.45)',
+            '3d-btn-active': '0 2px 0 #047857, 0 5px 15px rgba(16, 185, 129, 0.3)',
+            '3d-card': '0 20px 40px -15px rgba(0,0,0,0.5), 0 0 1px 1px rgba(255,255,255,0.1)',
+            'glow-cyan': '0 0 25px -5px rgba(6, 182, 212, 0.5)',
+            'glow-emerald': '0 0 25px -5px rgba(16, 185, 129, 0.5)',
+            'gloss-pill': 'inset 0 1px 2px rgba(255, 255, 255, 0.5), 0 10px 25px -5px rgba(16, 185, 129, 0.4)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- React 18, ReactDOM 18, Framer Motion, Babel Standalone -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    /* Strict viewport fitting & complete scrollbar removal */
+    html, body {
+      min-height: 100vh;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden !important;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+
+    /* Completely hide scrollbars across all browsers */
+    *::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+    * {
+      -ms-overflow-style: none !important;
+      scrollbar-width: none !important;
+    }
+
+    /* Cyber grid overlay */
+    .cyber-grid-dark {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.032) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.032) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    .cyber-grid-light {
+      background-image: 
+        linear-gradient(to right, rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    /* Glossy button reflective capsule highlight */
+    .gloss-sheen {
+      position: relative;
+      overflow: hidden;
+    }
+    .gloss-sheen::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 12%;
+      right: 12%;
+      height: 44%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.08) 100%);
+      border-radius: 9999px;
+      pointer-events: none;
+      filter: blur(0.5px);
+    }
+
+    /* Glass card styling */
+    .glass-card-dark {
+      background: rgba(10, 16, 29, 0.90);
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.75), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+    }
+
+    .glass-card-light {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      box-shadow: 0 20px 50px -12px rgba(15, 23, 42, 0.10), 0 0 1px 1px rgba(0, 0, 0, 0.04);
+    }
+  
+    /* ==========================================================================
+       MODERN RESPONSIVE MOBILE-FIRST ARCHITECTURE (320px, 480px, 768px, 1024px)
+       ========================================================================== */
+
+    /* 1. Global Box Sizing & Universal Boundary Constraints */
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+
+    html, body {
+      overflow-x: hidden !important;
+      width: 100% !important;
+      max-width: 100vw !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* 2. Fluid Responsive Media Scaling */
+    img, svg, video, canvas {
+      max-width: 100% !important;
+      height: auto;
+    }
+
+    /* 3. Text Containment & Boundary Overflow Prevention */
+    p, h1, h2, h3, h4, h5, h6, span, a, li, button, td, th {
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+      hyphens: manual;
+    }
+
+    /* 4. Mobile Interactive Controls & Touch Targets */
+    button, input, select, textarea {
+      max-width: 100% !important;
+    }
+    button, a.btn-3d {
+      touch-action: manipulation;
+    }
+
+    /* 5. Fluid Responsive Table & Matrix Containment */
+    .overflow-x-auto, [class*="overflow-x-auto"] {
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      max-width: 100% !important;
+    }
+
+    /* 6. Section Equal Spacing Standard */
+    section {
+      width: 100% !important;
+      max-width: 100vw !important;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS (320px, 480px, 768px, 1024px)
+       ========================================================================== */
+
+    /* Breakpoint 1: Ultra-compact handhelds (320px boundary, e.g. <= 359px) */
+    @media (max-width: 359px) {
+      section {
+        padding-top: 2.75rem !important;
+        padding-bottom: 2.75rem !important;
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+      }
+      .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+      }
+      h1, .font-display.text-4xl, .font-display.text-5xl, .font-display.text-6xl {
+        font-size: 1.625rem !important;
+        line-height: 1.2 !important;
+      }
+      h2, .font-display.text-3xl, .font-display.text-4xl {
+        font-size: 1.35rem !important;
+        line-height: 1.25 !important;
+      }
+      h3, .font-display.text-2xl {
+        font-size: 1.15rem !important;
+        line-height: 1.3 !important;
+      }
+      button, a.btn-3d {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        font-size: 0.8125rem !important;
+      }
+    }
+
+    /* Breakpoint 2: Standard Mobile Handsets (360px to 479px, e.g. 480px boundary) */
+    @media (min-width: 360px) and (max-width: 479px) {
+      section {
+        padding-top: 3.25rem !important;
+        padding-bottom: 3.25rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      h1, .font-display.text-5xl, .font-display.text-6xl {
+        font-size: 1.95rem !important;
+        line-height: 1.22 !important;
+      }
+      h2, .font-display.text-4xl {
+        font-size: 1.55rem !important;
+        line-height: 1.25 !important;
+      }
+    }
+
+    /* Breakpoint 3: Phablets & Small Tablets (480px to 767px, e.g. 768px boundary) */
+    @media (min-width: 480px) and (max-width: 767px) {
+      section {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+      }
+      h1, .font-display.text-5xl, .font-display.text-6xl {
+        font-size: 2.35rem !important;
+        line-height: 1.22 !important;
+      }
+      h2, .font-display.text-4xl {
+        font-size: 1.85rem !important;
+        line-height: 1.25 !important;
+      }
+    }
+
+    /* Breakpoint 4: Tablets & Small Laptops (768px to 1023px, e.g. 1024px boundary) */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      section {
+        padding-top: 4.75rem !important;
+        padding-bottom: 4.75rem !important;
+      }
+    }
+
+    /* RTL Direction & Dark/Light Mode Precision */
+    [dir="rtl"] {
+      text-align: right;
+    }
+    [dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+      --tw-space-x-reverse: 1;
+    }
+    [dir="rtl"] .rtl-flip {
+      transform: scaleX(-1);
+    }
+
+  </style>
+</head>
+<body className="antialiased selection:bg-emerald-500 selection:text-white">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+    const { motion, AnimatePresence } = window.Motion || window.framerMotion || { 
+      motion: { div: 'div', button: 'button', form: 'form', a: 'a' }, 
+      AnimatePresence: ({ children }) => children 
+    };
+
+    // ==========================================================================
+    // BRAND LOGO (Identical component & SVG emblem as index.html)
+    // ==========================================================================
+    const BrandLogo = ({ isDark = true }) => {
+      const handleLogoClick = (e) => {
+        window.location.href = 'index.html';
+      };
+      return (
+        <a 
+          href="index.html" 
+          onClick={handleLogoClick}
+          dir="ltr" 
+          className="group flex items-center gap-2.5 focus:outline-none select-none flex-shrink-0 cursor-pointer">
+          {/* Credit Repair FinTech Emblem Container */}
+          <div className="relative w-9 h-9 rounded-full bg-[#080d1a] border border-cyan-400/50 flex items-center justify-center shadow-[0_2px_10px_rgba(6,182,212,0.35)] flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+            {/* SVG Credit Card + Repair Wrench + 850 Rebound Trajectory */}
+            <svg viewBox="0 0 36 36" className="w-5 h-5 drop-shadow-[0_2px_6px_rgba(16,185,129,0.7)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="crsCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#0b1b2d" />
+                  <stop offset="100%" stopColor="#05281e" />
+                </linearGradient>
+                <linearGradient id="crsCardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#06B6D4" />
+                  <stop offset="50%" stopColor="#10B981" />
+                  <stop offset="100%" stopColor="#38BDF8" />
+                </linearGradient>
+                <linearGradient id="crsWrenchGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#06B6D4" />
+                  <stop offset="100%" stopColor="#34D399" />
+                </linearGradient>
+                <linearGradient id="crsTrajectoryGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#10B981" />
+                  <stop offset="100%" stopColor="#67E8F9" />
+                </linearGradient>
+                <linearGradient id="crsGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FDE047" />
+                  <stop offset="100%" stopColor="#D97706" />
+                </linearGradient>
+              </defs>
+
+              {/* 1. The Credit Card Silhouette (CREDIT) */}
+              <rect x="4" y="8" width="28" height="18" rx="3" fill="url(#crsCardBg)" stroke="url(#crsCardBorder)" strokeWidth="1.6" />
+              
+              {/* Magnetic Stripe Band */}
+              <rect x="4" y="11.5" width="28" height="2.6" fill="#06B6D4" fillOpacity="0.25" />
+
+              {/* Authentic Golden EMV Smart Microchip */}
+              <rect x="7" y="16" width="4.2" height="3.5" rx="0.7" fill="url(#crsGoldGrad)" />
+              <line x1="9.1" y1="16" x2="9.1" y2="19.5" stroke="#78350F" strokeWidth="0.5" />
+              <line x1="7" y1="17.75" x2="11.2" y2="17.75" stroke="#78350F" strokeWidth="0.5" />
+
+              {/* Tradeline Credit Account Tracks */}
+              <rect x="13" y="16.2" width="4.5" height="1.3" rx="0.65" fill="#67E8F9" fillOpacity="0.8" />
+              <rect x="19" y="16.2" width="4.5" height="1.3" rx="0.65" fill="#67E8F9" fillOpacity="0.8" />
+              <rect x="13" y="19" width="6.5" height="1.2" rx="0.6" fill="#34D399" fillOpacity="0.75" />
+
+              {/* 2. Precision Mechanical Repair Wrench (REPAIR) */}
+              <path d="M10 32 L17.5 24.5" stroke="url(#crsWrenchGrad)" strokeWidth="2.5" strokeLinecap="round" />
+              <path d="M16.5 25.5 L20.5 21.5 C21.3 20.7 21.3 19.5 20.5 18.7 L20.1 18.3 C19.3 17.5 18.1 17.5 17.3 18.3 L15.5 20.1 M17 19 L18.5 20.5" 
+                    stroke="url(#crsWrenchGrad)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+
+              {/* 3. Upward Score Rebound Trajectory Surge Arrow (FICO 850) */}
+              <path d="M14 24.5 L21.5 17 L24.5 20 L31 9.5" stroke="url(#crsTrajectoryGrad)" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M26.5 9.5 H31 V14" stroke="url(#crsTrajectoryGrad)" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round" />
+
+              {/* 4. Restored Prime Score Starburst */}
+              <circle cx="31" cy="9.5" r="1.5" fill="#FFFFFF" className="animate-ping" style={{ transformOrigin: '31px 9.5px', animationDuration: '3s' }} />
+              <circle cx="31" cy="9.5" r="1.2" fill="#FFFFFF" />
+              <path d="M31 6.5 V12.5 M28 9.5 H34" stroke="#67E8F9" strokeWidth="1" strokeLinecap="round" />
+            </svg>
+          </div>
+
+          {/* Unified Typography & Wordmark */}
+          <div className="flex flex-col text-left leading-none flex-shrink-0">
+            <div className="flex items-center gap-1.5 leading-none">
+              <span className={`font-display font-black text-sm tracking-tight leading-none ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                CREDIT<span className="text-[#00c076]">REPAIR</span>
+              </span>
+              <span className="text-[10px] font-mono font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 leading-none">
+                850+
+              </span>
+            </div>
+            <div className="flex items-center gap-1.5 mt-1 leading-none">
+              <span className={`text-[9px] font-mono tracking-[0.18em] font-bold uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                SERVICE
+              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span className="text-[9px] font-mono font-bold tracking-wider text-cyan-400">
+                FCRA
+              </span>
+            </div>
+          </div>
+        </a>
+      );
+    };
+
+    // ==========================================================================
+    // ICONS (Explicit width/height guaranteed to render cleanly)
+    // ==========================================================================
+    const IconMoon = ({ className = "w-5 h-5" }) => (
+      <svg width="20" height="20" className={className} viewBox="0 0 24 24" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    );
+
+    const IconSun = ({ className = "w-5 h-5" }) => (
+      <svg width="20" height="20" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="4" fill="currentColor" fillOpacity="0.25"/>
+        <path d="M12 2v2"/>
+        <path d="M12 20v2"/>
+        <path d="m4.93 4.93 1.41 1.41"/>
+        <path d="m17.66 17.66 1.41 1.41"/>
+        <path d="M2 12h2"/>
+        <path d="M20 12h2"/>
+        <path d="m6.34 17.66-1.41 1.41"/>
+        <path d="m19.07 4.93-1.41 1.41"/>
+      </svg>
+    );
+
+    const IconArrowLeftRight = ({ className = "w-4 h-4" }) => (
+      <svg width="18" height="18" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M8 7h12m0 0-4-4m4 4-4 4"/>
+        <path d="M16 17H4m0 0 4 4m-4-4 4-4"/>
+      </svg>
+    );
+
+    const IconLock = ({ className = "w-4 h-4" }) => (
+      <svg width="16" height="16" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+    );
+
+    const IconEye = ({ className = "w-4 h-4" }) => (
+      <svg width="16" height="16" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+    );
+
+    const IconEyeOff = ({ className = "w-4 h-4" }) => (
+      <svg width="16" height="16" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/>
+        <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/>
+        <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/>
+        <line x1="2" x2="22" y1="2" y2="22"/>
+      </svg>
+    );
+
+    const IconCheckCircle = ({ className = "w-4 h-4" }) => (
+      <svg width="16" height="16" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+    );
+
+    // Social SSO SVGs
+    const IconGoogle = ({ className = "w-4 h-4" }) => (
+      <svg width="18" height="18" className={className} viewBox="0 0 24 24">
+        <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z" />
+        <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24Z" />
+        <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.17 0 9.97 0 12s.45 3.83 1.25 5.42l4.03-3.15Z" />
+        <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98Z" />
+      </svg>
+    );
+
+    const IconFacebook = ({ className = "w-4 h-4" }) => (
+      <svg width="18" height="18" className={className} viewBox="0 0 24 24" fill="#1877F2">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+    );
+
+    const IconApple = ({ className = "w-4 h-4", isDark = true }) => (
+      <svg width="18" height="18" className={className} viewBox="0 0 170 170" fill={isDark ? "#FFFFFF" : "#0f172a"}>
+        <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.59-7.79-11.71-14.25-6.52-10.22-11.51-21.74-14.97-34.56-3.47-12.82-5.2-24.64-5.2-35.47 0-15.01 3.59-27.42 10.77-37.23 7.18-9.82 16.42-14.86 27.72-15.14 5.33 0 11.2 1.34 17.61 4.02 6.42 2.68 10.44 4.07 12.07 4.17 1.85-.1 6.09-1.55 12.72-4.34 6.64-2.8 12.3-4.08 17-3.85 13.06.66 23.33 5.48 30.82 14.46-11.53 6.96-17.18 16.42-16.96 28.37.22 9.57 3.91 17.67 11.09 24.31 7.18 6.64 15.66 10.33 25.44 11.09-2.39 7.4-5.11 14.3-8.16 20.7zM119.22 31.02c0-7.39 2.61-14.35 7.83-20.87 5.22-6.52 11.63-10.15 19.23-10.15.22 1.09.33 2.07.33 2.94 0 7.39-2.72 14.46-8.15 21.2-5.44 6.74-11.96 10.44-19.57 11.09.21-1.41.33-2.81.33-4.21z"/>
+      </svg>
+    );
+
+    // ==========================================================================
+    // MAIN COMPONENT
+    // ==========================================================================
+    function LoginPage() {
+      // Synchronize with localStorage matching index.html
+      const [theme, setTheme] = useState(() => {
+        if (typeof window !== 'undefined') {
+          return localStorage.getItem('crs_theme') || 'dark';
+        }
+        return 'dark';
+      });
+
+      const [dir, setDir] = useState(() => {
+        if (typeof window !== 'undefined') {
+          return localStorage.getItem('crs_dir') || 'ltr';
+        }
+        return 'ltr';
+      });
+
+      // Form state
+      const [usernameOrEmail, setUsernameOrEmail] = useState('');
+      const [password, setPassword] = useState('');
+      const [showPassword, setShowPassword] = useState(false);
+      const [rememberMe, setRememberMe] = useState(true);
+
+      // Status simulation
+      const [authStatus, setAuthStatus] = useState('idle'); // idle | loading | success | error
+      const [authMessage, setAuthMessage] = useState('');
+
+      // Forgot Password Modal state
+      const [forgotModalOpen, setForgotModalOpen] = useState(false);
+      const [forgotEmail, setForgotEmail] = useState('');
+      const [forgotSent, setForgotSent] = useState(false);
+
+      // Create Account Modal state (opened via bottom button)
+      const [registerModalOpen, setRegisterModalOpen] = useState(false);
+      const [regName, setRegName] = useState('');
+      const [regEmail, setRegEmail] = useState('');
+      const [regPass, setRegPass] = useState('');
+      const [regSuccess, setRegSuccess] = useState(false);
+
+      // Synchronize html class and localStorage
+      useEffect(() => {
+        const root = document.documentElement;
+        if (theme === 'dark') {
+          root.classList.add('dark');
+          root.classList.remove('light');
+        } else {
+          root.classList.remove('dark');
+          root.classList.add('light');
+        }
+        localStorage.setItem('crs_theme', theme);
+      }, [theme]);
+
+      useEffect(() => {
+        const root = document.documentElement;
+        root.setAttribute('dir', dir);
+        localStorage.setItem('crs_dir', dir);
+      }, [dir]);
+
+      const toggleTheme = () => {
+        setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+      };
+
+      const toggleDir = () => {
+        setDir(prev => (prev === 'ltr' ? 'rtl' : 'ltr'));
+      };
+
+      const isDark = theme === 'dark';
+      const isRtl = dir === 'rtl';
+
+      // Demo Auto-Fill helper
+      const handleDemoFill = () => {
+        setUsernameOrEmail('sarah.miller@creditrepair.fintech');
+        setPassword('FICO850#SecureKey');
+        setAuthMessage('Demo client credentials loaded.');
+      };
+
+      // Form submit handler
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!usernameOrEmail.trim() || !password.trim()) {
+          setAuthStatus('error');
+          setAuthMessage('Please enter your username/email and password.');
+          return;
+        }
+
+        setAuthStatus('loading');
+        setAuthMessage('Verifying 256-Bit Credentials...');
+
+        setTimeout(() => {
+          setAuthStatus('success');
+          setAuthMessage('Access Granted! Redirecting...');
+          setTimeout(() => {
+            window.location.href = 'index.html?portal=active';
+          }, 1200);
+        }, 1100);
+      };
+
+      const handleForgotSubmit = (e) => {
+        e.preventDefault();
+        if (!forgotEmail) return;
+        setForgotSent(true);
+        setTimeout(() => {
+          setForgotSent(false);
+          setForgotModalOpen(false);
+          setForgotEmail('');
+        }, 2200);
+      };
+
+      const handleRegisterSubmit = (e) => {
+        e.preventDefault();
+        if (!regName || !regEmail || !regPass) return;
+        setRegSuccess(true);
+        setTimeout(() => {
+          setRegSuccess(false);
+          setRegisterModalOpen(false);
+          setUsernameOrEmail(regEmail);
+          setPassword(regPass);
+          setAuthMessage('Account created! Click Log In to enter.');
+        }, 1800);
+      };
+
+      return (
+        <div className={`min-h-screen w-full relative flex flex-col justify-between py-6 px-3 sm:px-6 select-none ${
+          isDark ? 'bg-[#030712] text-slate-100 cyber-grid-dark' : 'bg-slate-50 text-slate-900 cyber-grid-light'
+        }`}>
+          {/* Subtle Ambient Glowing Background Blobs */}
+          <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+            <div 
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-[400px] rounded-full blur-[130px] pointer-events-none transition-opacity duration-700 ${
+                isDark ? 'bg-gradient-to-tr from-emerald-600/15 via-cyan-500/15 to-transparent opacity-80' : 'bg-gradient-to-tr from-emerald-300/20 via-cyan-200/25 to-transparent opacity-60'
+              }`}
+            />
+          </div>
+
+          {/* ================================================================ */}
+          {/* FLOATING TOP-RIGHT CONTROLS: RTL (⇄) & THEME (Sun / Moon) */}
+          {/* Top-left button removed */}
+          {/* ================================================================ */}
+          <div className="absolute top-4 right-4 sm:top-5 sm:right-6 z-30 flex items-center gap-2">
+            {/* Direction Toggle (⇄) */}
+            <button
+              type="button"
+              onClick={toggleDir}
+              aria-label="Toggle Direction"
+              title={`Switch to ${dir === 'ltr' ? 'Right-to-Left (RTL)' : 'Left-to-Right (LTR)'}`}
+              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                isDark
+                  ? 'bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border-slate-700/80 shadow-md'
+                  : 'bg-white hover:bg-slate-100 text-slate-700 hover:text-cyan-600 border-slate-300 shadow-sm'
+              }`}
+            >
+              <IconArrowLeftRight className="w-4 h-4" />
+            </button>
+
+            {/* FIXED Light / Dark Mode Toggle Button */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label="Toggle Light/Dark Theme"
+              title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                isDark
+                  ? 'bg-slate-900/90 hover:bg-slate-800 text-amber-400 hover:text-amber-300 border-slate-700 shadow-md'
+                  : 'bg-white hover:bg-slate-100 text-slate-800 hover:text-indigo-600 border-slate-300 shadow-sm'
+              }`}
+            >
+              {isDark ? (
+                <IconSun className="w-5 h-5 text-amber-400" />
+              ) : (
+                <IconMoon className="w-5 h-5 text-indigo-600" />
+              )}
+            </button>
+          </div>
+
+          {/* ================================================================ */}
+          {/* MAIN COMPACT LOGIN CARD (Reduced height, zero overflow) */}
+          {/* ================================================================ */}
+          <main className="relative z-10 flex-1 flex items-center justify-center px-4 py-2 my-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97, y: 12 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className={`w-full max-w-[400px] rounded-3xl p-5 sm:p-7 transition-all duration-300 relative overflow-hidden ${
+                isDark ? 'glass-card-dark' : 'glass-card-light'
+              }`}
+            >
+              {/* CARD HEADER: Centered Brand Emblem + Logo Wordmark */}
+              <div className="flex flex-col items-center text-center mb-4">
+                <div className="transform hover:scale-105 transition-transform duration-300">
+                  <BrandLogo isDark={isDark} />
+                </div>
+                <div className="mt-1.5 flex items-center gap-1.5 text-[10px] font-mono tracking-widest uppercase font-bold text-emerald-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                  <span>CLIENT VAULT & AUDIT PORTAL</span>
+                </div>
+              </div>
+
+              {/* QUICK STATUS OR NOTIFICATION BANNER */}
+              <AnimatePresence>
+                {authMessage && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+                    animate={{ opacity: 1, height: 'auto', marginBottom: 10 }}
+                    exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+                    className={`p-2.5 rounded-xl text-[11px] font-semibold flex items-center justify-between border ${
+                      authStatus === 'error'
+                        ? 'bg-red-500/10 border-red-500/30 text-red-400'
+                        : authStatus === 'success'
+                        ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
+                        : 'bg-cyan-500/10 border-cyan-500/30 text-cyan-400'
+                    }`}
+                  >
+                    <div className="flex items-center gap-1.5 truncate">
+                      {authStatus === 'success' && <IconCheckCircle className="w-3.5 h-3.5 flex-shrink-0" />}
+                      {authStatus === 'loading' && <div className="w-3 h-3 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin flex-shrink-0" />}
+                      <span className="truncate">{authMessage}</span>
+                    </div>
+                    <button type="button" onClick={() => setAuthMessage('')} className="text-slate-400 hover:text-white text-xs px-1"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* FORM FIELDS (Directly from Username to Password, matching reference) */}
+              <form onSubmit={handleSubmit} className="space-y-3">
+                {/* Username or Email */}
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className={`block text-[11px] font-semibold ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+                      Username or Email
+                    </label>
+                    <button
+                      type="button"
+                      onClick={handleDemoFill}
+                      title="Fill with test credentials"
+                      className="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 underline"
+                    >
+                      Demo fill
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    required
+                    value={usernameOrEmail}
+                    onChange={(e) => setUsernameOrEmail(e.target.value)}
+                    placeholder="e.g. secure@example.com"
+                    className={`w-full px-3.5 py-2.5 rounded-xl text-xs font-medium border transition-all outline-none focus:ring-2 focus:ring-emerald-500/30 ${
+                      isDark
+                        ? 'bg-[#0f172a]/90 border-slate-700/80 text-white placeholder-slate-500 focus:border-emerald-500'
+                        : 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-emerald-500'
+                    }`}
+                  />
+                </div>
+
+                {/* Password Field with Show/Hide Eye Toggle */}
+                <div>
+                  <label className={`block text-[11px] font-semibold mb-1 ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+                    Password
+                  </label>
+                  <div className="relative">
+                    <input
+                      type={showPassword ? 'text' : 'password'}
+                      required
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Enter your password"
+                      className={`w-full px-3.5 py-2.5 pr-10 rounded-xl text-xs font-medium border transition-all outline-none focus:ring-2 focus:ring-emerald-500/30 ${
+                        isDark
+                          ? 'bg-[#0f172a]/90 border-slate-700/80 text-white placeholder-slate-500 focus:border-emerald-500'
+                          : 'bg-slate-50 border-slate-300 text-slate-900 placeholder-slate-400 focus:border-emerald-500'
+                      }`}
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      aria-label="Toggle password visibility"
+                      className={`absolute right-2.5 top-1/2 -translate-y-1/2 p-1 rounded-lg transition-colors ${
+                        isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+                      }`}
+                    >
+                      {showPassword ? <IconEyeOff className="w-4 h-4" /> : <IconEye className="w-4 h-4" />}
+                    </button>
+                  </div>
+                </div>
+
+                {/* Remember Me & Forgot Password Row */}
+                <div className="flex items-center justify-between text-[11px] pt-0.5">
+                  <label className="flex items-center gap-1.5 cursor-pointer select-none">
+                    <input
+                      type="checkbox"
+                      checked={rememberMe}
+                      onChange={(e) => setRememberMe(e.target.checked)}
+                      className="w-3.5 h-3.5 rounded border-slate-600 text-emerald-500 focus:ring-emerald-500/30 bg-slate-800"
+                    />
+                    <span className={isDark ? 'text-slate-300' : 'text-slate-600'}>Remember me</span>
+                  </label>
+
+                  <button
+                    type="button"
+                    onClick={() => setForgotModalOpen(true)}
+                    className="font-semibold text-amber-400 hover:text-amber-300 transition-colors focus:outline-none"
+                  >
+                    Forgot Password?
+                  </button>
+                </div>
+
+                {/* PRIMARY ACTION BUTTON (Glossy Sheen Reflection Capsule - matching screenshot) */}
+                <div className="pt-1.5">
+                  <button
+                    type="submit"
+                    disabled={authStatus === 'loading'}
+                    className={`w-full py-3 px-5 rounded-2xl font-display font-bold text-xs tracking-wider text-white transition-all duration-300 transform active:scale-[0.98] gloss-sheen flex items-center justify-center gap-2 shadow-gloss-pill ${
+                      authStatus === 'loading'
+                        ? 'opacity-80 cursor-wait bg-slate-700'
+                        : 'bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-600 hover:from-emerald-500 hover:to-teal-500 shadow-[0_10px_24px_rgba(16,185,129,0.45)]'
+                    }`}
+                  >
+                    {authStatus === 'loading' ? (
+                      <>
+                        <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        <span>Verifying...</span>
+                      </>
+                    ) : (
+                      <>
+                        <IconLock className="w-3.5 h-3.5" />
+                        <span className="uppercase tracking-widest">LOG IN</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+
+              {/* OR CONTINUE WITH DIVIDER */}
+              <div className="relative my-3.5 flex items-center justify-center">
+                <div className={`absolute inset-x-0 h-px ${isDark ? 'bg-slate-800' : 'bg-slate-200'}`} />
+                <span className={`relative px-3 text-[9px] font-mono uppercase tracking-[0.2em] font-semibold ${
+                  isDark ? 'bg-[#0a101d] text-slate-400' : 'bg-white text-slate-500'
+                }`}>
+                  OR CONTINUE WITH
+                </span>
+              </div>
+
+              {/* SOCIAL SSO SQUIRCLE BUTTONS (Google, Facebook, Apple) */}
+              <div className="grid grid-cols-3 gap-2.5 mb-3.5">
+                {/* Google SSO */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setUsernameOrEmail('google.user@gmail.com');
+                    setPassword('GoogleAuth#Pass2026');
+                    setAuthMessage('Google SSO Handshake Verified.');
+                  }}
+                  className={`py-2 rounded-xl border flex items-center justify-center transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 ${
+                    isDark
+                      ? 'bg-slate-900/80 hover:bg-slate-800/90 border-slate-700/80 hover:border-slate-600'
+                      : 'bg-white hover:bg-slate-50 border-slate-200 hover:border-slate-300'
+                  }`}
+                  aria-label="Sign in with Google"
+                >
+                  <IconGoogle className="w-4 h-4" />
+                </button>
+
+                {/* Facebook SSO */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setUsernameOrEmail('facebook.user@meta.com');
+                    setPassword('MetaAuth#Pass2026');
+                    setAuthMessage('Facebook OAuth Handshake Verified.');
+                  }}
+                  className={`py-2 rounded-xl border flex items-center justify-center transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 ${
+                    isDark
+                      ? 'bg-slate-900/80 hover:bg-slate-800/90 border-slate-700/80 hover:border-slate-600'
+                      : 'bg-white hover:bg-slate-50 border-slate-200 hover:border-slate-300'
+                  }`}
+                  aria-label="Sign in with Facebook"
+                >
+                  <IconFacebook className="w-4 h-4" />
+                </button>
+
+                {/* Apple SSO */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setUsernameOrEmail('apple.id@icloud.com');
+                    setPassword('AppleID#Pass2026');
+                    setAuthMessage('Apple ID Passkey Verified.');
+                  }}
+                  className={`py-2 rounded-xl border flex items-center justify-center transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 ${
+                    isDark
+                      ? 'bg-slate-900/80 hover:bg-slate-800/90 border-slate-700/80 hover:border-slate-600'
+                      : 'bg-white hover:bg-slate-50 border-slate-200 hover:border-slate-300'
+                  }`}
+                  aria-label="Sign in with Apple"
+                >
+                  <IconApple className="w-4 h-4" isDark={isDark} />
+                </button>
+              </div>
+
+              {/* SECONDARY OUTLINE ACTION BUTTON (Create New Account -> registeration.html) */}
+              <a
+                href="registeration.html"
+                className={`block w-full py-2.5 px-4 rounded-xl text-xs font-bold tracking-wide transition-all duration-200 border text-center ${
+                  isDark
+                    ? 'border-slate-700 hover:border-emerald-500/60 bg-slate-900/40 hover:bg-slate-800/60 text-slate-200 hover:text-white'
+                    : 'border-slate-300 hover:border-emerald-600 bg-white hover:bg-slate-50 text-slate-800'
+                }`}
+              >
+                Create New Account
+              </a>
+            </motion.div>
+          </main>
+
+          {/* ================================================================ */}
+          {/* COMPACT FOOTER BAR */}
+          {/* ================================================================ */}
+          <footer className="relative z-20 w-full py-2.5 text-center text-[10px] text-slate-400 border-t border-slate-800/30">
+            <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-2 sm:gap-4 font-mono">
+              <span>© 2026 CREDIT REPAIR SERVICE. All Rights Reserved.</span>
+              <span className="text-slate-600">•</span>
+              <a href="index.html#contact" className="hover:text-emerald-400 transition-colors">
+                Book Consultation
+              </a>
+              <span className="text-slate-600">•</span>
+              <a href="contact.html" className="hover:text-cyan-400 transition-colors">
+                Emergency Dispatch
+              </a>
+            </div>
+          </footer>
+
+          {/* ================================================================ */}
+          {/* FORGOT PASSWORD MODAL */}
+          {/* ================================================================ */}
+          <AnimatePresence>
+            {forgotModalOpen && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: 14 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 14 }}
+                  className={`w-full max-w-sm rounded-3xl p-6 border shadow-3d-card relative ${
+                    isDark ? 'bg-[#0b1222] border-slate-700/80 text-white' : 'bg-white border-slate-200 text-slate-900'
+                  }`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setForgotModalOpen(false)}
+                    className="absolute top-4 right-4 w-7 h-7 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white text-xs"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </button>
+
+                  <div className="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mb-3">
+                    <IconLock className="w-5 h-5" />
+                  </div>
+
+                  <h3 className="font-display font-bold text-lg mb-1">Reset Password</h3>
+                  <p className="text-[11px] text-slate-400 mb-4 leading-relaxed">
+                    Enter your registered email to receive a 6-digit cryptographic verification OTP.
+                  </p>
+
+                  {forgotSent ? (
+                    <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold flex items-center gap-2">
+                      <IconCheckCircle className="w-4 h-4 flex-shrink-0" />
+                      <span>Security OTP dispatched to {forgotEmail}!</span>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleForgotSubmit} className="space-y-3">
+                      <div>
+                        <label className="block text-[11px] font-semibold mb-1 text-slate-300">
+                          Registered Email
+                        </label>
+                        <input
+                          type="email"
+                          required
+                          value={forgotEmail}
+                          onChange={(e) => setForgotEmail(e.target.value)}
+                          placeholder="client@creditrepair.com"
+                          className={`w-full px-3 py-2 rounded-xl text-xs border outline-none ${
+                            isDark
+                              ? 'bg-slate-900 border-slate-700 text-white focus:border-amber-400'
+                              : 'bg-slate-50 border-slate-300 text-slate-900 focus:border-amber-500'
+                          }`}
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="w-full py-2.5 rounded-xl font-display font-bold text-xs uppercase tracking-wider text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 transition-all shadow-md"
+                      >
+                        Send 6-Digit OTP
+                      </button>
+                    </form>
+                  )}
+                </motion.div>
+              </div>
+            )}
+          </AnimatePresence>
+
+          {/* ================================================================ */}
+          {/* CREATE ACCOUNT MODAL */}
+          {/* ================================================================ */}
+          <AnimatePresence>
+            {registerModalOpen && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: 14 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 14 }}
+                  className={`w-full max-w-sm rounded-3xl p-6 border shadow-3d-card relative ${
+                    isDark ? 'bg-[#0b1222] border-slate-700/80 text-white' : 'bg-white border-slate-200 text-slate-900'
+                  }`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setRegisterModalOpen(false)}
+                    className="absolute top-4 right-4 w-7 h-7 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white text-xs"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </button>
+
+                  <h3 className="font-display font-bold text-lg mb-1">Create Client Account</h3>
+                  <p className="text-[11px] text-slate-400 mb-4 leading-relaxed">
+                    Set up your 256-bit encrypted credit audit workspace in seconds.
+                  </p>
+
+                  {regSuccess ? (
+                    <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold flex items-center gap-2">
+                      <IconCheckCircle className="w-4 h-4 flex-shrink-0" />
+                      <span>Account created successfully! Loading portal...</span>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleRegisterSubmit} className="space-y-3">
+                      <div>
+                        <label className="block text-[11px] font-semibold mb-1 text-slate-300">
+                          Full Name
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          value={regName}
+                          onChange={(e) => setRegName(e.target.value)}
+                          placeholder="Sarah Miller"
+                          className={`w-full px-3 py-2 rounded-xl text-xs border outline-none ${
+                            isDark
+                              ? 'bg-slate-900 border-slate-700 text-white focus:border-emerald-500'
+                              : 'bg-slate-50 border-slate-300 text-slate-900 focus:border-emerald-500'
+                          }`}
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-[11px] font-semibold mb-1 text-slate-300">
+                          Email Address
+                        </label>
+                        <input
+                          type="email"
+                          required
+                          value={regEmail}
+                          onChange={(e) => setRegEmail(e.target.value)}
+                          placeholder="client@creditrepair.com"
+                          className={`w-full px-3 py-2 rounded-xl text-xs border outline-none ${
+                            isDark
+                              ? 'bg-slate-900 border-slate-700 text-white focus:border-emerald-500'
+                              : 'bg-slate-50 border-slate-300 text-slate-900 focus:border-emerald-500'
+                          }`}
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-[11px] font-semibold mb-1 text-slate-300">
+                          Password
+                        </label>
+                        <input
+                          type="password"
+                          required
+                          value={regPass}
+                          onChange={(e) => setRegPass(e.target.value)}
+                          placeholder="Create strong password"
+                          className={`w-full px-3 py-2 rounded-xl text-xs border outline-none ${
+                            isDark
+                              ? 'bg-slate-900 border-slate-700 text-white focus:border-emerald-500'
+                              : 'bg-slate-50 border-slate-300 text-slate-900 focus:border-emerald-500'
+                          }`}
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="w-full py-2.5 rounded-xl font-display font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 transition-all shadow-md"
+                      >
+                        Register Account
+                      </button>
+                    </form>
+                  )}
+                </motion.div>
+              </div>
+            )}
+          </AnimatePresence>
+        </div>
+      );
+    }
+
+    // Render React Root
+    const rootElement = document.getElementById('root');
+    ReactDOM.createRoot(rootElement).render(<LoginPage />);
+  </script>
+</body>
+</html>
